@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>sqs_iri_country — sqs_iri_country • iriR</title>
+<title>sqs_iri_indicator — sqs_iri_indicator • iriR</title>
 
 
 <!-- jquery -->
@@ -35,8 +35,8 @@
 
 
 
-<meta property="og:title" content="sqs_iri_country — sqs_iri_country" />
-<meta property="og:description" content="This function allows you to find and search the right country code associated with the Industrial Research and Innovation's Data.
+<meta property="og:title" content="sqs_iri_indicator — sqs_iri_indicator" />
+<meta property="og:description" content="This function allows you to find and search the right indicator code from the Industrial Research and Innovation you want to use.
 If no argument is filed, all indicators will be displayed." />
 <meta name="twitter:card" content="summary" />
 
@@ -101,38 +101,38 @@ If no argument is filed, all indicators will be displayed." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>sqs_iri_country</h1>
+    <h1>sqs_iri_indicator</h1>
     
-    <div class="hidden name"><code>sqs_iri_country.Rd</code></div>
+    <div class="hidden name"><code>sqs_iri_indicator.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>This function allows you to find and search the right country code associated with the Industrial Research and Innovation's Data.
+    <p>This function allows you to find and search the right indicator code from the Industrial Research and Innovation you want to use.
 If no argument is filed, all indicators will be displayed.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>sqs_iri_country</span>(<span class='no'>country</span>)</pre>
+    <pre class="usage"><span class='fu'>sqs_iri_indicator</span>(<span class='no'>indicators</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>country</th>
-      <td><p>The name of the country.</p></td>
+      <th>indicators</th>
+      <td><p>An indicator from the Industrial Research and Innovation.</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>Country's ISO code.</p>
+    <p>Indicator code from the Industrial Research and Innovation.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code><a href='sqs_iri_indicator.html'>sqs_iri_indicator</a></code> for the IRI's indicators, <code><a href='sqs_iri_company.html'>sqs_iri_company</a></code> for the IRI's companies name, <code><a href='sqs_iri_industry.html'>sqs_iri_industry</a></code> for the IRI's industries name and <code><a href='sqs_iri_data.html'>sqs_iri_data</a></code> to collect the data.</p></div>
+    <div class='dont-index'><p><code><a href='sqs_iri_country.html'>sqs_iri_country</a></code> for the IRI's country code, <code><a href='sqs_iri_company.html'>sqs_iri_company</a></code> for the IRI's companies name, <code><a href='sqs_iri_industry.html'>sqs_iri_industry</a></code> for the IRI's industries name and <code><a href='sqs_iri_data.html'>sqs_iri_data</a></code> to collect the data.</p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>mycountry</span> <span class='kw'>&lt;-</span> <span class='fu'>sqs_iri_country</span>()
-<span class='no'>mycountry</span> <span class='kw'>&lt;-</span> <span class='fu'>sqs_iri_country</span>(<span class='kw'>country</span> <span class='kw'>=</span> <span class='st'>"Canada"</span>)
-<span class='no'>mycountry</span> <span class='kw'>&lt;-</span> <span class='fu'>sqs_iri_country</span>(<span class='st'>"Canada"</span>)</div></pre>
+    <pre class="examples"><div class='input'><span class='no'>myIndicator</span> <span class='kw'>&lt;-</span> <span class='fu'>sqs_iri_indicator</span>()
+<span class='no'>myIndicator</span> <span class='kw'>&lt;-</span> <span class='fu'>sqs_iri_indicator</span>(<span class='kw'>indicators</span> <span class='kw'>=</span> <span class='st'>"sales"</span>)
+<span class='no'>myIndicator</span> <span class='kw'>&lt;-</span> <span class='fu'>sqs_iri_indicator</span>(<span class='st'>"sales"</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
