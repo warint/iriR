@@ -1,0 +1,12 @@
+Package: iriR
+Type: Package
+Title: Client for the EU Industrial Research and Industry Scoreboard 
+Version: 0.1.0
+Authors@R: 
+    person("Thierry", "Warin", email = "thierry.warin@skema.edu", role =c("aut", "cre"), comment = c(ORCID = "0000-0002-5921-3428") )
+Description: The iriR package allows an easy connection with R to the European Commission's Economics of Industrial Research and Innovation.
+Imports: gsheet, dplyr,reshape2
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
