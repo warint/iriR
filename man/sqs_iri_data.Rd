@@ -28,15 +28,6 @@ Data for the country, indicator, year, company, industrial sector and rank reque
 This function allows you to find and display the Industrial Research and Innovation data according to the selected parameters.
 If no arguments are filled, all data will be displayed.
 }
-\examples{
-data <- sqs_iri_data(country = "USA", years = "2018", indicators = "RD.euro",
- company = "FORD MOTOR")
-data <- sqs_iri_data("USA", "2018", "RD.euro", "FORD MOTOR",
- "Automobiles & Parts", "14")
-data <- sqs_iri_data(country =c("USA","DEU"),
- years =c("2018"), rank = 1:25 )
-
-}
 \seealso{
 \code{\link{sqs_iri_indicator}} for the IRI's indicator symbol, \code{\link{sqs_iri_country}} for the country's ISO code,
      \code{\link{sqs_iri_company}} for the IRI's companies name and \code{\link{sqs_iri_industry}} for the IRI's industries name.

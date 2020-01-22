@@ -22,9 +22,9 @@
 #'
 #' @examples
 #' data <- sqs_iri_data(country = "USA", years = "2018", indicators = "RD.euro",
-#'  company = "FORD MOTOR")
+#'    company = "FORD MOTOR", industry = "Automobile & Parts, rank = 14)
 #' data <- sqs_iri_data("USA", "2018", "RD.euro", "FORD MOTOR",
-#'  "Automobiles & Parts", "14")
+#'    "Automobiles & Parts", "14")
 #' data <- sqs_iri_data(country =c("USA","DEU"),
 #'  years =c("2018"), rank = 1:25 )
 #'
@@ -40,13 +40,13 @@ sqs_iri_data <- function(country = data_long_country,
                          company = data_long_company,
                          industry = data_long_industry,
                          rank = data_long_rank) {
-  var_code <- var_year <- var_indicator <- var_company <- var_industrial.sector <- var_rank <- NULL
+  var_code <- var_year <- var_indicator <- var_company <- var_industry <- var_rank <- NULL
   out <- dplyr::filter(data_long,
                        var_code %in% country,
                        var_year %in% years,
                        var_indicator %in% indicators,
                        var_company %in% company,
-                       var_industrial.sector %in% industry,
+                       var_industry %in% industry,
                        var_rank %in% rank)
   return(out)
 }
@@ -55,7 +55,7 @@ iri_data <- gsheet::gsheet2tbl("https://docs.google.com/spreadsheets/d/1mWprVoXj
 
 data_long <- reshape2::melt(iri_data,
                             # ID variables - all the variables to keep but not split apart on
-                            id.vars = c("countryName", "code", "year", "rank", "company", "industrial.sector"),
+                            id.vars = c("countryName", "code", "year", "rank", "company", "industry"),
                             # The source columns
                             measure.vars = colnames(iri_data)[7:ncol(iri_data)],
                             # Name of the destination column that will identify the original
@@ -64,7 +64,7 @@ data_long <- reshape2::melt(iri_data,
                             value.name = "value"
 )
 
-base::names(data_long) = c("countryName", "var_code", "var_year", "var_rank", "var_company", "var_industrial.sector", "var_indicator", "value")
+base::names(data_long) = c("countryName", "var_code", "var_year", "var_rank", "var_company", "var_industry", "var_indicator", "value")
 
 
 # Creating the default values for the function query
@@ -188,11 +188,11 @@ sqs_iri_company <- function(company){
 
 sqs_iri_industry <- function(industry){
   iri_industry <- unique(iri_data[,6])
-  iri_industry <- dplyr::arrange(iri_industry, industrial.sector)
+  iri_industry <- dplyr::arrange(iri_industry, industry)
   if (missing(industry)) {
     iri_industry
   } else {
-    iri_industry[grep(industry, iri_industry$industrial.sector, ignore.case = TRUE), ]
+    iri_industry[grep(industry, iri_industry$industry, ignore.case = TRUE), ]
   }
 }
 

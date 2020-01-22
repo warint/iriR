@@ -1,4 +1,4 @@
-use---
+---
 output: github_document
 ---
 
@@ -138,4 +138,3 @@ To learn more about the SKEMA Quantum Studio and the mission of the SKEMA Global
 ### Acknowledgments
 
 The author would like to thank the Center for Interuniversity Research and Analysis of Organizations (CIRANO, Montreal) for its support, as well as Thibault Senegas, Marine Leroi and Martin Paquette at SKEMA Global Lab in AI. The usual caveats apply.
-
