@@ -4,9 +4,14 @@
 \alias{sqs_iri_data}
 \title{sqs_iri_data}
 \usage{
-sqs_iri_data(country = data_long_country, years = data_long_year,
-  indicators = dat_long_indicator, company = data_long_company,
-  industry = data_long_industry, rank = data_long_rank)
+sqs_iri_data(
+  country = data_long_country,
+  years = data_long_year,
+  indicators = dat_long_indicator,
+  company = data_long_company,
+  industry = data_long_industry,
+  rank = data_long_rank
+)
 }
 \arguments{
 \item{country}{Countries' ISO code.}

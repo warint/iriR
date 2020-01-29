@@ -7,7 +7,8 @@
 
 <!-- badges: end -->
 
-The goal of iriR is to …
+The goal of iriR is to easily access the EU Industrial Research and
+Industry Scoreboard.
 
 ## Installation
 
@@ -20,17 +21,12 @@ devtools::install_github("warint/iriR")
 
 ## Overview of the available data
 
-Users can recreate in R impactful dashboards and visualizations as the
-ones found on [www.socialprogress.org](http://www.socialprogress.org):
-[click
-here](https://www.socialprogress.org/?tab=2&code=NOR&embedded=true)
-
 ## Installation
 
 You can install the current development version of ‘iriR’ with:
 
 ``` r
-devtools::install_github("warint/spiR")
+devtools::install_github("warint/iriR")
 ```
 
 ## How-To
@@ -105,20 +101,7 @@ sqs_iri_data() # It generates a data frame of the complete dataset
 
 ### Cite ‘iriR’
 
-To cite the ‘iriR’ package in your work:
-
-Warin, T. (2019). “spiR: Client for the Social Progress Index. v0.1.0.”
-
-``` r
-@article{Warin2019,
-author = "Thierry Warin",
-title = "{spiR: An R Package for the Social Progress Index}",
-year = "2019",
-month = "12",
-url = "https://figshare.com/articles/spiR_Client_for_Social_Progress_Index_Data/11421573",
-doi = "10.6084/m9.figshare.11421573.v2"
-}
-```
+…
 
 ### Why SQS ?
 
