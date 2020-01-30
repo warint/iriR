@@ -60,11 +60,11 @@ sqs_iri_country("Canada") # The ISO code for Canada will be produced
 A user needs to enter the code of the desired indicator. To do so, the following function provides access to all the indicators of interest.
 
 ```{r, eval = FALSE}
-sqs_spi_indicator() # A list of all indicators will be produced
+sqs_iri_indicator() # A list of all indicators will be produced
 
-sqs_spi_indicator(indicators = "sales") # A list with all the variables including "sales" will be produced
+sqs_iri_indicator(indicators = "sales") # A list with all the variables including "sales" will be produced
 
-sqs_spi_indicator("sales") # A list with all the variables including "sales" will be produced
+sqs_iri_indicator("sales") # A list with all the variables including "sales" will be produced
 ```
 
 ### Step 3: Getting the company' name
