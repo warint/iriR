@@ -18,6 +18,7 @@ knitr::opts_chunk$set(
 # <img src="man/figures/LOGO.png" align="right" />
 
 <!-- badges: start -->
+[![Travis build status](https://travis-ci.org/warint/iriR.svg?branch=master)](https://travis-ci.org/warint/iriR)
 <!-- badges: end -->
 
 ## Overview

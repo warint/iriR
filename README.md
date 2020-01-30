@@ -7,6 +7,8 @@
 
 <!-- badges: start -->
 
+[![Travis build
+status](https://travis-ci.org/warint/iriR.svg?branch=master)](https://travis-ci.org/warint/iriR)
 <!-- badges: end -->
 
 ## Overview
