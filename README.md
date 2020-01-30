@@ -9,6 +9,8 @@
 
 [![Travis build
 status](https://travis-ci.org/warint/iriR.svg?branch=master)](https://travis-ci.org/warint/iriR)
+[![AppVeyor build
+status](https://ci.appveyor.com/api/projects/status/github/warint/iriR?branch=master&svg=true)](https://ci.appveyor.com/project/warint/iriR)
 <!-- badges: end -->
 
 ## Overview
