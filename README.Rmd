@@ -15,26 +15,27 @@ knitr::opts_chunk$set(
 
 # iriR
 
+# <img src="man/figures/LOGO.png" align="right" />
+
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of iriR is to easily access the EU Industrial Research and Industry Scoreboard.
+## Overview
 
-## Installation
+The IRI Scoreboard for data on innovation, managed by the European Commission, lists Research and Development investments made by the world’s 1,000 top investor companies.This scientific project carried out within the Directorate B: Growth and Innovation, one of the seven scientific institutes of the European Commission's Joint Research Centre (JRC).
 
-You can install the released version of iriR from [CRAN](https://CRAN.R-project.org) with:
+The IRI aims at providing robust data and analysis on the contribution of private-sector R&D to sustainable competitiveness and "prosperity" in the EU.  With iriR, we want to make easily available the IRI's data and modestly help the European Commission in achieving its goals, such as open the data to EU policy-makers, academia, and other institutional and economic actors.
 
-``` r
-devtools::install_github("warint/iriR")
-```
+Through our R package, people can see the six parameters that composed the global IRI'data on R&D : Country, Year, Company's name, Industry, Indicator and Compaany's rank.
 
-## Overview of the available data
-
+To learn more about IRI and follow the work of the European Comission, please visit this [page](https://iri.jrc.ec.europa.eu/home/). To see a definition of the indicators, please visit this [page](https://iri.jrc.ec.europa.eu/sites/default/files/2019-12/SB2019_Final_18Dec2019_0.pdf). See below to have access through iriR to the whole list of indicators,industries, companies and countries.
 
 
 ## Installation
 
-You can install the current development version of 'iriR' with:
+
+
+You can install the current development version of 'iriR' with devtools:
 
 ```{r, eval = FALSE}
 devtools::install_github("warint/iriR")
@@ -111,8 +112,27 @@ sqs_iri_data() # It generates a data frame of the complete dataset
 
 ### Cite 'iriR'
 
-...
+```{r,eval=FALSE}
+@article{Warin2020,
+author = "Thierry Warin",
+title = "{iriR: iriR: A R Package for the EU Industrial Research and Industry Scoreboard}",
+year = "2020",
+month = "1",
+url = "https://figshare.com/articles/iriR_Client_for_the_EU_Industrial_Research_and_Industry_Scoreboard/11774640",
+doi = "10.6084/m9.figshare.11774640"
+}
+```
 
+
+
+
+##### Acknowledgment of Source according to Creative Commons Attribution 4.0 International (CC BY 4.0) licence.
+
+As it is stated, The European Commission's reuse policy is implemented by the Commission Decision of 12 December 2011 on the reuse of Commission [documents](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011D0833).
+
+Unless otherwise indicated (e.g. in individual copyright notices), content and data owned by the EU is licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) [licence](https://creativecommons.org/licenses/by/4.0/). 
+
+Reuse is allowed, provided appropriate credit is given and changes are indicated.
 
 ### Why SQS ?
 
