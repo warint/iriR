@@ -3,8 +3,6 @@
 
 # iriR
 
-# <img src="man/figures/LOGO.png" align="right" />
-
 <!-- badges: start -->
 
 [![Travis build
