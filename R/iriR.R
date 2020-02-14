@@ -22,7 +22,7 @@
 #'
 #' @examples
 #' data <- sqs_iri_data(country = "USA", years = "2018", indicators = "RD.euro",
-#'    company = "FORD MOTOR", industry = "Automobile & Parts, rank = 14)
+#'    company = "FORD MOTOR", industry = "Automobile & Parts", rank = 14)
 #' data <- sqs_iri_data("USA", "2018", "RD.euro", "FORD MOTOR",
 #'    "Automobiles & Parts", "14")
 #' data <- sqs_iri_data(country =c("USA","DEU"),
