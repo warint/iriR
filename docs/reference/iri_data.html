@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • iriR</title>
+<title>sqs_iri_data — iri_data • iriR</title>
 
 
 <!-- jquery -->
@@ -39,7 +39,9 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="sqs_iri_data — iri_data" />
+<meta property="og:description" content="This function allows you to find and display the Industrial Research and Innovation data according to the selected parameters.
+If no arguments are filled, all data will be displayed." />
 
 
 
@@ -58,7 +60,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -112,66 +114,72 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>sqs_iri_data</h1>
+    
+    <div class="hidden name"><code>iri_data.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    <p>This function allows you to find and display the Industrial Research and Innovation data according to the selected parameters.
+If no arguments are filled, all data will be displayed.</p>
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
+    <pre class="usage"><span class='fu'>iri_data</span>(
+  <span class='kw'>country</span> <span class='kw'>=</span> <span class='no'>data_long_country</span>,
+  <span class='kw'>years</span> <span class='kw'>=</span> <span class='no'>data_long_year</span>,
+  <span class='kw'>indicators</span> <span class='kw'>=</span> <span class='no'>dat_long_indicator</span>,
+  <span class='kw'>company</span> <span class='kw'>=</span> <span class='no'>data_long_company</span>,
+  <span class='kw'>industry</span> <span class='kw'>=</span> <span class='no'>data_long_industry</span>,
+  <span class='kw'>rank</span> <span class='kw'>=</span> <span class='no'>data_long_rank</span>
+)</pre>
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="iri_company.html">iri_company()</a></code> </p>
-        </td>
-        <td><p>iri_company</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="iri_country.html">iri_country()</a></code> </p>
-        </td>
-        <td><p>iri_country</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="iri_data.html">iri_data()</a></code> </p>
-        </td>
-        <td><p>sqs_iri_data</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="iri_indicator.html">iri_indicator()</a></code> </p>
-        </td>
-        <td><p>iri_indicator</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="iri_industry.html">iri_industry()</a></code> </p>
-        </td>
-        <td><p>iri_industry</p></td>
-      </tr>
-    </tbody>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>country</th>
+      <td><p>Countries' ISO code.</p></td>
+    </tr>
+    <tr>
+      <th>years</th>
+      <td><p>Years for which you want the data.</p></td>
+    </tr>
+    <tr>
+      <th>indicators</th>
+      <td><p>Indicators from the Industrial Research and Innovation.</p></td>
+    </tr>
+    <tr>
+      <th>company</th>
+      <td><p>Companies for which you want the data.</p></td>
+    </tr>
+    <tr>
+      <th>industry</th>
+      <td><p>Industries for which you want the data.</p></td>
+    </tr>
+    <tr>
+      <th>rank</th>
+      <td><p>Rank of a company.</p></td>
+    </tr>
     </table>
-  </div>
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>Data for the country, indicator, year, company, industrial sector and rank requested</p>
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p><code><a href='iri_indicator.html'>iri_indicator</a></code> for the IRI's indicator symbol, <code><a href='iri_country.html'>iri_country</a></code> for the country's ISO code,
+     <code><a href='iri_company.html'>iri_company</a></code> for the IRI's companies name and <code><a href='iri_industry.html'>iri_industry</a></code> for the IRI's industries name.</p></div>
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='no'>data</span> <span class='kw'>&lt;-</span> <span class='fu'>iri_data</span>(<span class='kw'>country</span> <span class='kw'>=</span> <span class='st'>"USA"</span>, <span class='kw'>years</span> <span class='kw'>=</span> <span class='st'>"2018"</span>, <span class='kw'>indicators</span> <span class='kw'>=</span> <span class='st'>"RD.euro"</span>,
+   <span class='kw'>company</span> <span class='kw'>=</span> <span class='st'>"FORD MOTOR"</span>, <span class='kw'>industry</span> <span class='kw'>=</span> <span class='st'>"Automobile &amp; Parts"</span>, <span class='kw'>rank</span> <span class='kw'>=</span> <span class='fl'>14</span>)
+<span class='no'>data</span> <span class='kw'>&lt;-</span> <span class='fu'>iri_data</span>(<span class='st'>"USA"</span>, <span class='st'>"2018"</span>, <span class='st'>"RD.euro"</span>, <span class='st'>"FORD MOTOR"</span>,
+   <span class='st'>"Automobiles &amp; Parts"</span>, <span class='st'>"14"</span>)
+<span class='no'>data</span> <span class='kw'>&lt;-</span> <span class='fu'>iri_data</span>(<span class='kw'>country</span> <span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"USA"</span>,<span class='st'>"DEU"</span>),
+ <span class='kw'>years</span> <span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"2018"</span>), <span class='kw'>rank</span> <span class='kw'>=</span> <span class='fl'>1</span>:<span class='fl'>25</span> )</div></pre>
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
