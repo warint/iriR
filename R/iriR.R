@@ -6,6 +6,8 @@ curl::curl_download(url, path)
 csv_file <- file.path(paste0(tempdir(), "/temp.csv"))
 iri_Data <- read.csv(csv_file)
 
+
+
 data_long <- reshape2::melt(iri_Data,
                             # ID variables - all the variables to keep but not split apart on
                             id.vars = c("country", "country_code", "year", "rank", "company", "industrial.sector"),
@@ -167,8 +169,9 @@ iri_country <- function(country) {
 #'mycompany<- iri_company("Samsung")
 #'
 
+
 iri_company <- function(company){
-  iri_company <- unique(iri_Data[,3])
+  iri_company <- unique(iri_Data$company)
   iri_company <- dplyr::arrange(iri_company, company)
   if (missing(company)) {
     iri_company
