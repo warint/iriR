@@ -1,36 +1,4 @@
-# downloading the data
-url <- paste0("https://sites.socialdatasciencelab.org/data/iriR/iriRdata_2019_2004.csv")
-path <- file.path(tempdir(), "temp.csv")
-curl::curl_download(url, path)
-#reading the data
-csv_file <- file.path(paste0(tempdir(), "/temp.csv"))
-iri_Data <- read.csv(csv_file)
 
-
-
-data_long <- reshape2::melt(iri_Data,
-                            # ID variables - all the variables to keep but not split apart on
-                            id.vars = c("country", "country_code", "year", "rank", "company", "industrial.sector"),
-                            # The source columns
-                            measure.vars = colnames(iri_Data)[7:ncol(iri_Data)],
-                            # Name of the destination column that will identify the original
-                            # column that the measurement came from
-                            variable.name = "var_indicator",
-                            value.name = "value"
-)
-
-base::names(data_long) = c("countryName", "var_code", "var_year", "var_rank", "var_company", "var_industry", "var_indicator", "value")
-
-
-# Creating the default values for the function query
-# IF an entry is missing, all the observations of this variable will be displayed
-
-data_long_country <- base::unique(data_long[,2])
-data_long_year <- base::unique(data_long[,3])
-dat_long_indicator <- base::unique(data_long[,7])
-data_long_company <- base::unique(data_long[,5])
-data_long_industry <- base::unique(data_long[,6])
-data_long_rank <- base::unique(data_long[,4])
 
 #' sqs_iri_data
 #'
@@ -88,6 +56,39 @@ iri_data <- function(country = data_long_country,
 }
 
 
+# downloading the data
+url <- paste0("https://sites.socialdatasciencelab.org/data/iriR/iriRdata_2019_2004.csv")
+path <- file.path(tempdir(), "temp.csv")
+curl::curl_download(url, path)
+#reading the data
+csv_file <- file.path(paste0(tempdir(), "/temp.csv"))
+iri_Data <- read.csv(csv_file)
+
+
+
+data_long <- reshape2::melt(iri_Data,
+                            # ID variables - all the variables to keep but not split apart on
+                            id.vars = c("country", "country_code", "year", "rank", "company", "industrial.sector"),
+                            # The source columns
+                            measure.vars = colnames(iri_Data)[7:ncol(iri_Data)],
+                            # Name of the destination column that will identify the original
+                            # column that the measurement came from
+                            variable.name = "var_indicator",
+                            value.name = "value"
+)
+
+base::names(data_long) = c("countryName", "var_code", "var_year", "var_rank", "var_company", "var_industry", "var_indicator", "value")
+
+
+# Creating the default values for the function query
+# IF an entry is missing, all the observations of this variable will be displayed
+
+data_long_country <- base::unique(data_long[,2])
+data_long_year <- base::unique(data_long[,3])
+dat_long_indicator <- base::unique(data_long[,7])
+data_long_company <- base::unique(data_long[,5])
+data_long_industry <- base::unique(data_long[,6])
+data_long_rank <- base::unique(data_long[,4])
 
 
 
@@ -168,15 +169,15 @@ iri_country <- function(country) {
 #'mycompany<- iri_company(company = "Samsung")
 #'mycompany<- iri_company("Samsung")
 #'
-
+iri_company <- unique(iri_data[,3])
 
 iri_company <- function(company){
-  iri_company <- unique(iri_Data$company)
-  iri_company <- dplyr::arrange(iri_company, company)
+  iri_company <- unique(iri_Data[,3])
+ # iri_Company <- dplyr::arrange(iri_Company, company)
   if (missing(company)) {
-    iri_company
+    iri_Company
   } else {
-    iri_company[grep(company, iri_company$company, ignore.case = TRUE), ]
+    iri_Company[grep(company, iri_Company$company, ignore.case = TRUE), ]
   }
 }
 
