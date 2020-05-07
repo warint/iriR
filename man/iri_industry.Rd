@@ -7,7 +7,7 @@
 iri_industry(industry)
 }
 \arguments{
-\item{industry}{The name of the industrial sector}
+\item{industry}{The name of the industrial sector.}
 }
 \value{
 Industry's name.
@@ -20,7 +20,6 @@ If no argument is filed, all names will be displayed.
 myindustry <- iri_industry()
 myindustry <- iri_industry(industry = "Automobile")
 myindustry <- iri_industry("Automobile")
-
 }
 \seealso{
 \code{\link{iri_country}} for the IRI's country code, \code{\link{iri_indicator}} for the IRI's indicators, \code{\link{iri_company}} for the IRI's companies name and \code{\link{iri_data}} to collect the data.

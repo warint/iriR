@@ -15,7 +15,6 @@
 #' @import gsheet
 #' @import dplyr
 #' @import reshape2
-#' @import curl
 #' @import readr
 #'
 #' @return Data for the country, indicator, year, company, industrial sector and rank requested
@@ -57,15 +56,15 @@ iri_data <- function(country = data_long_country,
 
 
 # downloading the data
-url <- paste0("https://sites.socialdatasciencelab.org/data/iriR/iriRdata_2019_2004.csv")
-path <- file.path(tempdir(), "temp.csv")
-curl::curl_download(url, path)
+#url <- paste0("https://sites.socialdatasciencelab.org/data/iriR/iriRdata_2019_2004.csv")
+#path <- file.path(tempdir(), "temp.csv")
+#curl::curl_download(url, path)
 #reading the data
-csv_file <- file.path(paste0(tempdir(), "/temp.csv"))
-iri_Data <- read.csv(csv_file)
+#csv_file <- file.path(paste0(tempdir(), "/temp.csv"))
+#iri_Data <- read.csv(csv_file)
 
-
-
+iri_Data <- gsheet::gsheet2tbl("https://docs.google.com/spreadsheets/d/1BDRuDDdrMI17gYMx8rR6TxNRn6XYpoplfERmNk3Nzxs/edit?usp=sharing
+")
 data_long <- reshape2::melt(iri_Data,
                             # ID variables - all the variables to keep but not split apart on
                             id.vars = c("country", "country_code", "year", "rank", "company", "industrial.sector"),
@@ -147,7 +146,7 @@ iri_country <- function(country) {
   if (missing(country)) {
     iri_countries_natural_language
   } else {
-    iri_countries_natural_language[grep(country, iri_countries_natural_language$countryName, ignore.case = TRUE), ]
+    iri_countries_natural_language[grep(country, iri_countries_natural_language$country, ignore.case = TRUE), ]
   }
 }
 
@@ -169,44 +168,46 @@ iri_country <- function(country) {
 #'mycompany<- iri_company(company = "Samsung")
 #'mycompany<- iri_company("Samsung")
 #'
-iri_company <- unique(iri_data[,3])
+
 
 iri_company <- function(company){
   iri_company <- unique(iri_Data[,3])
- # iri_Company <- dplyr::arrange(iri_Company, company)
+  iri_company <- dplyr::arrange(iri_company, company)
   if (missing(company)) {
-    iri_Company
+    iri_company
   } else {
-    iri_Company[grep(company, iri_Company$company, ignore.case = TRUE), ]
+    iri_company[grep(company, iri_company$company, ignore.case = TRUE), ]
   }
 }
 
-
 # Function 5: Industries' name reconciliation
 # If the user wants to know which industry is included in IRI's data, s.he has access to the answer in this query
+
 
 #' iri_industry
 #' @description This function allows you to find and search the right industry name associated with the Industrial Research and Innovation's Data.
 #' If no argument is filed, all names will be displayed.
 #'
-#' @param industry The name of the industrial sector
+#' @param industry The name of the industrial sector.
 #'
 #' @return Industry's name.
 #' @export
+#' @import dplyr
+#'
 #' @seealso \code{\link{iri_country}} for the IRI's country code, \code{\link{iri_indicator}} for the IRI's indicators, \code{\link{iri_company}} for the IRI's companies name and \code{\link{iri_data}} to collect the data.
 #' @examples
 #'myindustry <- iri_industry()
 #'myindustry <- iri_industry(industry = "Automobile")
 #'myindustry <- iri_industry("Automobile")
-#'
 
 iri_industry <- function(industry){
   iri_industry <- unique(iri_Data[,6])
-  iri_industry <- dplyr::arrange(iri_industry, industry)
+  #iri_industry <- dplyr::arrange(iri_industry, industry)
   if (missing(industry)) {
     iri_industry
   } else {
-    iri_industry[grep(industry, iri_industry$industry, ignore.case = TRUE), ]
+    iri_industry[grep(industry, iri_industry$industrial.sector, ignore.case = TRUE), ]
   }
 }
+
 
