@@ -63,8 +63,7 @@ iri_data <- function(country = data_long_country,
 #csv_file <- file.path(paste0(tempdir(), "/temp.csv"))
 #iri_Data <- read.csv(csv_file)
 
-iri_Data <- gsheet::gsheet2tbl("https://docs.google.com/spreadsheets/d/1BDRuDDdrMI17gYMx8rR6TxNRn6XYpoplfERmNk3Nzxs/edit?usp=sharing
-")
+iri_Data <- gsheet::gsheet2tbl("https://docs.google.com/spreadsheets/d/1BDRuDDdrMI17gYMx8rR6TxNRn6XYpoplfERmNk3Nzxs/edit?usp=sharing")
 data_long <- reshape2::melt(iri_Data,
                             # ID variables - all the variables to keep but not split apart on
                             id.vars = c("country", "country_code", "year", "rank", "company", "industrial.sector"),
