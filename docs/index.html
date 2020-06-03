@@ -80,8 +80,8 @@
 <h2 class="hasAnchor">
 <a href="#overview" class="anchor"></a>Overview</h2>
 <p>The IRI Scoreboard for data on innovation, managed by the European Commission, lists Research and Development investments made by the world’s 1,000 top investor companies.This scientific project carried out within the Directorate B: Growth and Innovation, one of the seven scientific institutes of the European Commission’s Joint Research Centre (JRC).</p>
-<p>The IRI aims at providing robust data and analysis on the contribution of private-sector R\&amp;D to sustainable competitiveness and “prosperity” in the EU. With iriR, we want to make easily available the IRI’s data and modestly help the European Commission in achieving its goals, such as open the data to EU policy-makers, academia, and other institutional and economic actors.</p>
-<p>Through our R package, people can see the six parameters that composed the global IRI’data on R\&amp;D : Country, Year, Company’s name, Industry, Indicator and Compaany’s rank.</p>
+<p>The IRI aims at providing robust data and analysis on the contribution of private-sector R&amp;D to sustainable competitiveness and “prosperity” in the EU. With iriR, we want to make easily available the IRI’s data and modestly help the European Commission in achieving its goals, such as open the data to EU policy-makers, academia, and other institutional and economic actors.</p>
+<p>Through our R package, people can see the six parameters that composed the global IRI’data on R&amp;D : Country, Year, Company’s name, Industry, Indicator and Compaany’s rank.</p>
 <p>To see a definition of the indicators, please visit this <a href="https://iri.jrc.ec.europa.eu/sites/default/files/2019-12/SB2019_Final_18Dec2019_0.pdf">page</a>. See below to have access through iriR to the whole list of indicators,industries, companies and countries.</p>
 <p>For more information about IRI and follow the work of the European Comission, please visit this <a href="https://iri.jrc.ec.europa.eu/home/">page</a>.</p>
 </div>
@@ -98,53 +98,53 @@
 <h3 class="hasAnchor">
 <a href="#step-1-getting-the-countrys-iso-code" class="anchor"></a>Step 1: Getting the country’s ISO code</h3>
 <p>A user needs to enter the ISO code of a country. To have access to this code, the following function provides this information.</p>
-<div class="sourceCode" id="cb2"><pre class="r"><span class="fu"><a href="reference/iri_country.html">iri_country</a></span>() <span class="co"># A list of all countries will be produced</span>
+<div class="sourceCode" id="cb2"><pre class="r"><span class="fu">iri_country</span>() <span class="co"># A list of all countries will be produced</span>
 
-<span class="fu"><a href="reference/iri_country.html">iri_country</a></span>(<span class="kw">country</span> <span class="kw">=</span> <span class="st">"Canada"</span>) <span class="co"># The ISO code for Canada will be produced</span>
+<span class="fu">iri_country</span>(<span class="kw">country</span> <span class="kw">=</span> <span class="st">"Canada"</span>) <span class="co"># The ISO code for Canada will be produced</span>
 
-<span class="fu"><a href="reference/iri_country.html">iri_country</a></span>(<span class="st">"Canada"</span>) <span class="co"># The ISO code for Canada will be produced</span></pre></div>
+<span class="fu">iri_country</span>(<span class="st">"Canada"</span>) <span class="co"># The ISO code for Canada will be produced</span></pre></div>
 </div>
 <div id="step-2-getting-the-indicators-code" class="section level3">
 <h3 class="hasAnchor">
 <a href="#step-2-getting-the-indicators-code" class="anchor"></a>Step 2: Getting the indicator’s code</h3>
 <p>A user needs to enter the code of the desired indicator. To do so, the following function provides access to all the indicators of interest.</p>
-<div class="sourceCode" id="cb3"><pre class="r"><span class="fu"><a href="reference/iri_indicator.html">iri_indicator</a></span>() <span class="co"># A list of all indicators will be produced</span>
+<div class="sourceCode" id="cb3"><pre class="r"><span class="fu">iri_indicator</span>() <span class="co"># A list of all indicators will be produced</span>
 
-<span class="fu"><a href="reference/iri_indicator.html">iri_indicator</a></span>(<span class="kw">indicators</span> <span class="kw">=</span> <span class="st">"sales"</span>) <span class="co"># A list with all the variables including "sales" will be produced</span>
+<span class="fu">iri_indicator</span>(<span class="kw">indicators</span> <span class="kw">=</span> <span class="st">"sales"</span>) <span class="co"># A list with all the variables including "sales" will be produced</span>
 
-<span class="fu"><a href="reference/iri_indicator.html">iri_indicator</a></span>(<span class="st">"sales"</span>) <span class="co"># A list with all the variables including "sales" will be produced</span></pre></div>
+<span class="fu">iri_indicator</span>(<span class="st">"sales"</span>) <span class="co"># A list with all the variables including "sales" will be produced</span></pre></div>
 </div>
 <div id="step-3-getting-the-company-name" class="section level3">
 <h3 class="hasAnchor">
 <a href="#step-3-getting-the-company-name" class="anchor"></a>Step 3: Getting the company’ name</h3>
 <p>A user needs to enter the name of the desired company. To do so, the following function provides access to all the companies of interest.</p>
-<div class="sourceCode" id="cb4"><pre class="r"><span class="fu"><a href="reference/iri_company.html">iri_company</a></span>() <span class="co"># A list of all companies will be produced</span>
+<div class="sourceCode" id="cb4"><pre class="r"><span class="fu">iri_company</span>() <span class="co"># A list of all companies will be produced</span>
 
-<span class="fu"><a href="reference/iri_company.html">iri_company</a></span>(<span class="kw">company</span> <span class="kw">=</span> <span class="st">"Samsung"</span>) <span class="co"># A list with all the variables including "Samsung" will be produced</span>
+<span class="fu">iri_company</span>(<span class="kw">company</span> <span class="kw">=</span> <span class="st">"Samsung"</span>) <span class="co"># A list with all the variables including "Samsung" will be produced</span>
 
-<span class="fu"><a href="reference/iri_indicator.html">iri_indicator</a></span>(<span class="st">"Samsung"</span>) <span class="co"># A list with all the variables including "Samsung" will be produced</span></pre></div>
+<span class="fu">iri_indicator</span>(<span class="st">"Samsung"</span>) <span class="co"># A list with all the variables including "Samsung" will be produced</span></pre></div>
 </div>
 <div id="step-4-getting-the-industry-name" class="section level3">
 <h3 class="hasAnchor">
 <a href="#step-4-getting-the-industry-name" class="anchor"></a>Step 4: Getting the industry’ name</h3>
 <p>A user needs to enter the name of the desired industry. To do so, the following function provides access to all the industries of interest.</p>
-<div class="sourceCode" id="cb5"><pre class="r"><span class="fu"><a href="reference/iri_industry.html">iri_industry</a></span>() <span class="co"># A list of all companies will be produced</span>
+<div class="sourceCode" id="cb5"><pre class="r"><span class="fu">iri_industry</span>() <span class="co"># A list of all companies will be produced</span>
 
-<span class="fu"><a href="reference/iri_industry.html">iri_industry</a></span>(<span class="kw">industry</span> <span class="kw">=</span> <span class="st">"Automobile"</span>) <span class="co"># A list with all the variables including "Automobile" will be produced</span>
+<span class="fu">iri_industry</span>(<span class="kw">industry</span> <span class="kw">=</span> <span class="st">"Automobile"</span>) <span class="co"># A list with all the variables including "Automobile" will be produced</span>
 
-<span class="fu"><a href="reference/iri_industry.html">iri_industry</a></span>(<span class="st">"Automobile"</span>)<span class="co"># A list with all the variables including "Automobile" will be produced</span></pre></div>
+<span class="fu">iri_industry</span>(<span class="st">"Automobile"</span>)<span class="co"># A list with all the variables including "Automobile" will be produced</span></pre></div>
 </div>
 <div id="step-5-getting-the-data" class="section level3">
 <h3 class="hasAnchor">
 <a href="#step-5-getting-the-data" class="anchor"></a>Step 5: Getting the data</h3>
 <p>Once the user knows all the arguments, s.he can collect the data in a very easy way through this function:</p>
-<div class="sourceCode" id="cb6"><pre class="r"><span class="fu"><a href="reference/iri_data.html">iri_data</a></span>(<span class="kw">country</span> <span class="kw">=</span> <span class="st">"USA"</span>, <span class="kw">years</span> <span class="kw">=</span> <span class="st">"2018"</span>, <span class="kw">indicators</span> <span class="kw">=</span> <span class="st">"RD.euro"</span>, <span class="kw">company</span> <span class="kw">=</span> <span class="st">"FORD MOTOR"</span>, <span class="kw">industry</span> <span class="kw">=</span> <span class="st">"Automobiles &amp; Parts"</span>, <span class="kw">rank</span> <span class="kw">=</span> <span class="fl">14</span>)  <span class="co"># It generates a data frame of the overall IRI data for American company "FORD MOTOR" in 2018.</span>
+<div class="sourceCode" id="cb6"><pre class="r"><span class="fu">iri_data</span>(<span class="kw">country</span> <span class="kw">=</span> <span class="st">"USA"</span>, <span class="kw">years</span> <span class="kw">=</span> <span class="st">"2018"</span>, <span class="kw">indicators</span> <span class="kw">=</span> <span class="st">"RD.euro"</span>, <span class="kw">company</span> <span class="kw">=</span> <span class="st">"FORD MOTOR"</span>, <span class="kw">industry</span> <span class="kw">=</span> <span class="st">"Automobiles &amp; Parts"</span>, <span class="kw">rank</span> <span class="kw">=</span> <span class="fl">14</span>)  <span class="co"># It generates a data frame of the overall IRI data for American company "FORD MOTOR" in 2018.</span>
 
-<span class="fu"><a href="reference/iri_data.html">iri_data</a></span>(<span class="kw">country</span><span class="kw">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"USA"</span>, <span class="st">"FRA"</span>), <span class="kw">years</span><span class="kw">=</span><span class="st">"2018"</span>,) <span class="co"># It generates a data frame of all the companies data from all the industries for the USA and France in 2018.</span>
+<span class="fu">iri_data</span>(<span class="kw">country</span><span class="kw">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"USA"</span>, <span class="st">"FRA"</span>), <span class="kw">years</span><span class="kw">=</span><span class="st">"2018"</span>,) <span class="co"># It generates a data frame of all the companies data from all the industries for the USA and France in 2018.</span>
 
-<span class="fu"><a href="reference/iri_data.html">iri_data</a></span>(<span class="kw">years</span> <span class="kw">=</span> <span class="st">"2018"</span>) <span class="co"># It generates a data frame of all the companies data for from all the industries for all the countries in 2018.</span>
+<span class="fu">iri_data</span>(<span class="kw">years</span> <span class="kw">=</span> <span class="st">"2018"</span>) <span class="co"># It generates a data frame of all the companies data for from all the industries for all the countries in 2018.</span>
 
-<span class="fu"><a href="reference/iri_data.html">iri_data</a></span>() <span class="co"># It generates a data frame of the complete dataset</span></pre></div>
+<span class="fu">iri_data</span>() <span class="co"># It generates a data frame of the complete dataset</span></pre></div>
 </div>
 <div id="cite-irir" class="section level3">
 <h3 class="hasAnchor">
@@ -157,25 +157,18 @@ month = "1",
 url = "https://figshare.com/articles/iriR_Client_for_the_EU_Industrial_Research_and_Industry_Scoreboard/11774640",
 doi = "10.6084/m9.figshare.11774640"
 }</pre></div>
-<div id="acknowledgment-of-source-according-to-creative-commons-attribution-4-0-international-cc-by-4-0-licence-" class="section level5">
+<div id="acknowledgment-of-source-according-to-creative-commons-attribution-40-international-cc-by-40-licence" class="section level5">
 <h5 class="hasAnchor">
-<a href="#acknowledgment-of-source-according-to-creative-commons-attribution-4-0-international-cc-by-4-0-licence-" class="anchor"></a>Acknowledgment of Source according to Creative Commons Attribution 4.0 International (CC BY 4.0) licence.</h5>
+<a href="#acknowledgment-of-source-according-to-creative-commons-attribution-40-international-cc-by-40-licence" class="anchor"></a>Acknowledgment of Source according to Creative Commons Attribution 4.0 International (CC BY 4.0) licence.</h5>
 <p>As it is stated, The European Commission’s reuse policy is implemented by the Commission Decision of 12 December 2011 on the reuse of Commission <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011D0833">documents</a>.</p>
 <p>Unless otherwise indicated (e.g. in individual copyright notices), content and data owned by the EU is licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) <a href="https://creativecommons.org/licenses/by/4.0/">licence</a>.</p>
 <p>Reuse is allowed, provided appropriate credit is given and changes are indicated.</p>
 </div>
 </div>
-<div id="why-sqs" class="section level3">
-<h3 class="hasAnchor">
-<a href="#why-sqs" class="anchor"></a>Why SQS ?</h3>
-<p>SQS stands for SKEMA Quantum Studio, a research and technological development centre based in Montreal, Canada, that serves as the engine room for the SKEMA Global lab in AI.</p>
-<p>SKEMA Quantum Studio is also a state-of-the-art platform developed by our team that enables scholars, students and professors to access one of the most powerful analytical tools in higher education. By using data science and artificial intelligence within the platform, new theories, methods and concepts are being developed to study globalisation, innovation and digital transformations that our society faces.</p>
-<p>To learn more about the SKEMA Quantum Studio and the mission of the SKEMA Global Lab in AI, please visit the following websites : <a href="https://quantumstudio.skemagloballab.io">SQS</a> ; <a href="https://skemagloballab.io/">Global Lab</a>.</p>
-</div>
 <div id="acknowledgments" class="section level3">
 <h3 class="hasAnchor">
 <a href="#acknowledgments" class="anchor"></a>Acknowledgments</h3>
-<p>The author would like to thank the Center for Interuniversity Research and Analysis of Organizations (CIRANO, Montreal) for its support, as well as Thibault Senegas, Marine Leroi and Martin Paquette at SKEMA Global Lab in AI. The usual caveats apply.</p>
+<p>The author would like to thank the Center for Interuniversity Research and Analysis of Organizations (CIRANO, Montreal) for its support, as well as Thibault Senegas, Marine Leroi and Martin Paquette. The usual caveats apply.</p>
 </div>
 </div>
 </div>

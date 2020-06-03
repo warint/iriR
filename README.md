@@ -104,8 +104,7 @@ iri_industry("Automobile")# A list with all the variables including "Automobile"
 ### Step 5: Getting the data
 
 Once the user knows all the arguments, s.he can collect the data in a
-very easy way through this
-function:
+very easy way through this function:
 
 ``` r
 iri_data(country = "USA", years = "2018", indicators = "RD.euro", company = "FORD MOTOR", industry = "Automobiles & Parts", rank = 14)  # It generates a data frame of the overall IRI data for American company "FORD MOTOR" in 2018.
@@ -145,27 +144,9 @@ Attribution 4.0 International (CC BY 4.0)
 Reuse is allowed, provided appropriate credit is given and changes are
 indicated.
 
-### Why SQS ?
-
-SQS stands for SKEMA Quantum Studio, a research and technological
-development centre based in Montreal, Canada, that serves as the engine
-room for the SKEMA Global lab in AI.
-
-SKEMA Quantum Studio is also a state-of-the-art platform developed by
-our team that enables scholars, students and professors to access one of
-the most powerful analytical tools in higher education. By using data
-science and artificial intelligence within the platform, new theories,
-methods and concepts are being developed to study globalisation,
-innovation and digital transformations that our society faces.
-
-To learn more about the SKEMA Quantum Studio and the mission of the
-SKEMA Global Lab in AI, please visit the following websites :
-[SQS](https://quantumstudio.skemagloballab.io) ; [Global
-Lab](https://skemagloballab.io/).
-
 ### Acknowledgments
 
 The author would like to thank the Center for Interuniversity Research
 and Analysis of Organizations (CIRANO, Montreal) for its support, as
-well as Thibault Senegas, Marine Leroi and Martin Paquette at SKEMA
-Global Lab in AI. The usual caveats apply.
+well as Thibault Senegas, Marine Leroi and Martin Paquette. The usual
+caveats apply.
