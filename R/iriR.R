@@ -56,14 +56,13 @@ iri_data <- function(country = data_long_country,
 
 
 # downloading the data
-#url <- paste0("https://warin.ca/ressources/data/iriR/iriRdata_2019_2004.csv")
-#path <- file.path(tempdir(), "temp.csv")
-#curl::curl_download(url, path)
+url <- paste0("https://warin.ca/ressources/data/iriR/iriRdata_2019_2004.csv")
+path <- file.path(tempdir(), "temp.csv")
+curl::curl_download(url, path)
 #reading the data
-#csv_file <- file.path(paste0(tempdir(), "/temp.csv"))
-#iri_Data <- read.csv(csv_file)
+csv_file <- file.path(paste0(tempdir(), "/temp.csv"))
+iri_Data <- read.csv(csv_file)
 
-iri_Data <- gsheet::gsheet2tbl("https://docs.google.com/spreadsheets/d/1BDRuDDdrMI17gYMx8rR6TxNRn6XYpoplfERmNk3Nzxs/edit?usp=sharing")
 data_long <- reshape2::melt(iri_Data,
                             # ID variables - all the variables to keep but not split apart on
                             id.vars = c("country", "country_code", "year", "rank", "company", "industrial.sector"),
@@ -170,8 +169,9 @@ iri_country <- function(country) {
 
 
 iri_company <- function(company){
-  iri_company <- unique(iri_Data[,3])
-  iri_company <- dplyr::arrange(iri_company, company)
+  iri_company <- unique(iri_Data$company)
+  iri_company <- as.data.frame(iri_company)
+  names(iri_company)[1] <- "company"
   if (missing(company)) {
     iri_company
   } else {
@@ -200,8 +200,9 @@ iri_company <- function(company){
 #'myindustry <- iri_industry("Automobile")
 
 iri_industry <- function(industry){
-  iri_industry <- unique(iri_Data[,6])
-  #iri_industry <- dplyr::arrange(iri_industry, industry)
+  iri_industry <- unique(iri_Data$industrial.sector)
+  iri_industry <- as.data.frame(iri_industry)
+  names(iri_industry)[1] <- "industrial.sector"
   if (missing(industry)) {
     iri_industry
   } else {
