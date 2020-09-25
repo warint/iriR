@@ -56,7 +56,7 @@ iri_data <- function(country = data_long_country,
 
 
 # downloading the data
-url <- paste0("https://warin.ca/ressources/data/iriR/iriRdata_2019_2004.csv")
+url <- paste0("https://warin.ca/datalake/iriR/iriRdata_2019_2004.csv")
 path <- file.path(tempdir(), "temp.csv")
 curl::curl_download(url, path)
 #reading the data
