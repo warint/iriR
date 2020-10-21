@@ -192,10 +192,10 @@ irir_industry <- function(industry){
 
 
 
-# Function 5: Industries' name reconciliation
-# If the user wants to know which industry is included in IRI's data, s.he has access to the answer in this query
+# Function 6: Visuals
 
-#' irir_industry
+
+#' irir_visual
 #' @description This function allows you to create 3 sorts of visuals: line, bar and point charts.
 #'
 #' @param country The Country ISO code

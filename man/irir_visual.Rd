@@ -2,7 +2,7 @@
 % Please edit documentation in R/iriR.R
 \name{irir_visual}
 \alias{irir_visual}
-\title{irir_industry}
+\title{irir_visual}
 \usage{
 irir_visual(
   country = "CAN",

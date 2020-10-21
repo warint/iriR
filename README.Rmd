@@ -41,6 +41,11 @@ You can install the current development version of 'iriR' with devtools:
 
 ```{r, eval = FALSE}
 devtools::install_github("warint/iriR")
+
+```
+
+```{r,echo=FALSE}
+library(iriR)
 ```
 
 
@@ -51,11 +56,11 @@ devtools::install_github("warint/iriR")
 A user needs to enter the ISO code of a country. To have access to this code, the following function provides this information.
 
 ```{r, eval = FALSE}
-iri_country() # A list of all countries will be produced
+irir_country() # A list of all countries will be produced
 
-iri_country(country = "Canada") # The ISO code for Canada will be produced
+irir_country(country = "Canada") # The ISO code for Canada will be produced
 
-iri_country("Canada") # The ISO code for Canada will be produced
+irir_country("Canada") # The ISO code for Canada will be produced
 ```
 
 ### Step 2: Getting the indicator's code
@@ -63,11 +68,11 @@ iri_country("Canada") # The ISO code for Canada will be produced
 A user needs to enter the code of the desired indicator. To do so, the following function provides access to all the indicators of interest.
 
 ```{r, eval = FALSE}
-iri_indicator() # A list of all indicators will be produced
+irir_indicator() # A list of all indicators will be produced
 
-iri_indicator(indicators = "sales") # A list with all the variables including "sales" will be produced
+irir_indicator(indicators = "sales") # A list with all the variables including "sales" will be produced
 
-iri_indicator("sales") # A list with all the variables including "sales" will be produced
+irir_indicator("sales") # A list with all the variables including "sales" will be produced
 ```
 
 ### Step 3: Getting the company' name
@@ -75,11 +80,11 @@ iri_indicator("sales") # A list with all the variables including "sales" will be
 A user needs to enter the name of the desired company. To do so, the following function provides access to all the companies of interest.
 
 ```{r, eval = FALSE}
-iri_company() # A list of all companies will be produced
+irir_company() # A list of all companies will be produced
 
-iri_company(company = "Samsung") # A list with all the variables including "Samsung" will be produced
+irir_company(company = "Samsung") # A list with all the variables including "Samsung" will be produced
 
-iri_indicator("Samsung") # A list with all the variables including "Samsung" will be produced
+irir_indicator("Samsung") # A list with all the variables including "Samsung" will be produced
 ```
 
 ### Step 4: Getting the industry' name
@@ -88,11 +93,11 @@ A user needs to enter the name of the desired industry. To do so, the following 
 
 
 ```{r, eval = FALSE}
-iri_industry() # A list of all companies will be produced
+irir_industry() # A list of all companies will be produced
 
-iri_industry(industry = "Automobile") # A list with all the variables including "Automobile" will be produced
+irir_industry(industry = "Automobile") # A list with all the variables including "Automobile" will be produced
 
-iri_industry("Automobile")# A list with all the variables including "Automobile" will be produced
+irir_industry("Automobile")# A list with all the variables including "Automobile" will be produced
 ```
 
 
@@ -102,15 +107,45 @@ iri_industry("Automobile")# A list with all the variables including "Automobile"
 Once the user knows all the arguments, s.he can collect the data in a very easy way through this function:
 
 ```{r, eval=FALSE}
-iri_data(country = "USA", years = "2018", indicators = "RD.euro", company = "FORD MOTOR", industry = "Automobiles & Parts", rank = 14)  # It generates a data frame of the overall IRI data for American company "FORD MOTOR" in 2018.
+irir_data(country = "USA", years = "2018", indicators = "RD.euro", company = "FORD MOTOR", industry = "Automobiles & Parts", rank = 14)  # It generates a data frame of the overall IRI data for American company "FORD MOTOR" in 2018.
 
-iri_data(country=c("USA", "FRA"), years="2018",) # It generates a data frame of all the companies data from all the industries for the USA and France in 2018.
+irir_data(country=c("USA", "FRA"), years="2018",) # It generates a data frame of all the companies data from all the industries for the USA and France in 2018.
 
-iri_data(years = "2018") # It generates a data frame of all the companies data for from all the industries for all the countries in 2018.
+irir_data(years = "2018") # It generates a data frame of all the companies data for from all the industries for all the countries in 2018.
 
-iri_data() # It generates a data frame of the complete dataset
+irir_data() # It generates a data frame of the complete dataset
 ```
 
+## Create visuals
+
+Country set to Canada by default, if no country code but argument, only top 5. 
+
+
+### Barchart on Top 5 countries for number of leading companies in R&D
+
+Country set to Canada by default, if there is no country code but an empty argument, only top 5 like as below. 
+
+```{r}
+irir_visual(country = "" ,chart = "bar_1")
+```
+
+If the argument "country" is missing, Canada will be included by default
+
+```{r}
+
+irir_visual(chart = "bar_1")
+```
+
+However, you can choose the country of your choice to be included.
+
+```{r}
+irir_visual(country = "FRA",  chart = "bar_1")
+```
+
+
+bar123
+line6
+point1
 
 ### Cite 'iriR'
 
