@@ -138,61 +138,40 @@ However, users can modify the graphs as they wish with these arguments :
 **Chart**
 
   - Each chart illustrates a different data from the IRI Scoreboard
-      - bar\_1
-      - bar\_2
-      - bar\_3
-      - line\_1
-      - line\_2
-      - line\_3
-      - line\_4
-      - line\_5
-      - line\_6
-      - point\_1
+      - bar\_1 : Number of leading companies in R\&D for the most
+        represented countries
+      - bar\_2 : Number of leading companies in R\&D per 100 billion $US
+        of GDP for the most represented countries
+      - bar\_3 : R\&D expenditures of the leading companies for the most
+        represented countries
+      - line\_1 : Evolution as regards the number of leading companies
+        in R\&D for the most represented countries
+      - line\_2 : Evolution as regards the number of leading companies
+        in R\&D per 100 billion $US of GDP for
+      - line\_3 : Evolution as regards R\&D expenditures of the leading
+        companies for the the most represented countries
+      - line\_4 : Evolution as regards the number of leading companies
+        in R\&D & the total of their R\&D investments (in millions of
+        $US)")
+      - line\_5 : Evolution as regards the percentage of R\&D
+        investments made by companies of the total R\&D investments."
+      - line\_6 : Evolution as regards the R\&D per employee in $US
+      - point\_1 : Net sales/R\&D investment ratio per total R\&D
+        investment for the the most represented countries
 
-### Barcharts
+**Years**
 
-Country set to Canada by default. If there is no country code but an
-empty argument, only top 5 will appear as below.
+  - Allows you to choose which year will be used in the chart. If no
+    year is set, the latest available will be used.
+  - Only works with barcharts
 
-``` r
-irir_visual(country = "" ,chart = "bar_1")
-```
-
-<img src="man/figures/README-unnamed-chunk-9-1.png" width="100%" />
-
-If the argument “country” is missing, Canada will be included by default
+<!-- end list -->
 
 ``` r
 irir_visual(chart = "bar_1")
 ```
 
-<img src="man/figures/README-unnamed-chunk-10-1.png" width="100%" />
-
-However, you can choose the country of your choice to be included.
-
-``` r
-irir_visual(country = "FRA",  chart = "bar_1")
-```
-
-<img src="man/figures/README-unnamed-chunk-11-1.png" width="100%" />
-
-The same logic applies for the two other bar charts
-
-``` r
-irir_visual(chart = "bar_2")
-```
-
-<img src="man/figures/README-unnamed-chunk-12-1.png" width="100%" />
-
-``` r
-irir_visual(chart = "bar_3")
-```
-
-<img src="man/figures/README-unnamed-chunk-13-1.png" width="100%" />
-
-### Linecharts
-
-bar123 line6 point1
+<img src="man/figures/README-unnamed-chunk-9-1.png" width="100%" />
 
 ### Cite ‘iriR’
 
