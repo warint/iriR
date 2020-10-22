@@ -116,15 +116,43 @@ irir_data(years = "2018") # It generates a data frame of all the companies data 
 irir_data() # It generates a data frame of the complete dataset
 ```
 
-## Create visuals
+## Create visuals with irir\_visual
 
-Country set to Canada by default, if no country code but argument, only
-top 5.
+irir\_visual fonction allows to create three type of visuals from the
+IRI Scoreboard for data on innovation : barcharts, linecharts and
+pointcharts.
 
-### Barchart on Top 5 countries for number of leading companies in R\&D
+By default, graphs will illustrate top 5 countries and Canada.
 
-Country set to Canada by default, if there is no country code but an
-empty argument, only top 5 like as below.
+However, users can modify the graphs as they wish with these arguments :
+
+**Country**
+
+  - From the ISO codes provided by the irir\_country() function, users
+    can can choice which country they want to add to the top 5 or make
+    it appear.
+
+  - If there is no country code but an empty argument, only top 5 will
+    appear.
+
+**Chart**
+
+  - Each chart illustrates a different data from the IRI Scoreboard
+      - bar\_1
+      - bar\_2
+      - bar\_3
+      - line\_1
+      - line\_2
+      - line\_3
+      - line\_4
+      - line\_5
+      - line\_6
+      - point\_1
+
+### Barcharts
+
+Country set to Canada by default. If there is no country code but an
+empty argument, only top 5 will appear as below.
 
 ``` r
 irir_visual(country = "" ,chart = "bar_1")
@@ -135,7 +163,6 @@ irir_visual(country = "" ,chart = "bar_1")
 If the argument “country” is missing, Canada will be included by default
 
 ``` r
-
 irir_visual(chart = "bar_1")
 ```
 
@@ -148,6 +175,22 @@ irir_visual(country = "FRA",  chart = "bar_1")
 ```
 
 <img src="man/figures/README-unnamed-chunk-11-1.png" width="100%" />
+
+The same logic applies for the two other bar charts
+
+``` r
+irir_visual(chart = "bar_2")
+```
+
+<img src="man/figures/README-unnamed-chunk-12-1.png" width="100%" />
+
+``` r
+irir_visual(chart = "bar_3")
+```
+
+<img src="man/figures/README-unnamed-chunk-13-1.png" width="100%" />
+
+### Linecharts
 
 bar123 line6 point1
 

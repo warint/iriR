@@ -116,14 +116,37 @@ irir_data(years = "2018") # It generates a data frame of all the companies data 
 irir_data() # It generates a data frame of the complete dataset
 ```
 
-## Create visuals
+## Create visuals with irir_visual
 
-Country set to Canada by default, if no country code but argument, only top 5. 
+irir_visual fonction allows to create three type of visuals from the IRI Scoreboard for data on innovation : barcharts, linecharts and pointcharts.
 
+By default, graphs will illustrate top 5 countries and Canada. 
 
-### Barchart on Top 5 countries for number of leading companies in R&D
+However, users can modify the graphs as they wish with these arguments :
 
-Country set to Canada by default, if there is no country code but an empty argument, only top 5 like as below. 
+**Country**
+
+- From the ISO codes provided by the irir_country() function, users can can choice which country they want to add to the top 5 or make it appear.
+
+- If there is no country code but an empty argument, only top 5 will appear.
+
+**Chart**
+
+- Each chart illustrates a different data from the IRI Scoreboard
+  - bar_1
+  - bar_2
+  - bar_3
+  - line_1
+  - line_2
+  - line_3
+  - line_4
+  - line_5
+  - line_6
+  - point_1
+
+### Barcharts
+
+Country set to Canada by default. If there is no country code but an empty argument, only top 5 will appear as below. 
 
 ```{r}
 irir_visual(country = "" ,chart = "bar_1")
@@ -132,8 +155,8 @@ irir_visual(country = "" ,chart = "bar_1")
 If the argument "country" is missing, Canada will be included by default
 
 ```{r}
-
 irir_visual(chart = "bar_1")
+
 ```
 
 However, you can choose the country of your choice to be included.
@@ -141,6 +164,25 @@ However, you can choose the country of your choice to be included.
 ```{r}
 irir_visual(country = "FRA",  chart = "bar_1")
 ```
+
+The same logic applies for the two other bar charts
+
+
+```{r}
+irir_visual(chart = "bar_2")
+```
+
+
+```{r}
+irir_visual(chart = "bar_3")
+```
+
+### Linecharts
+
+```{r}
+
+```
+
 
 
 bar123
