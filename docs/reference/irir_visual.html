@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • iriR</title>
+<title>irir_visual — irir_visual • iriR</title>
 
 
 <!-- jquery -->
@@ -39,7 +39,8 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="irir_visual — irir_visual" />
+<meta property="og:description" content="This function allows you to create 3 sorts of visuals: line, bar and point charts." />
 
 
 
@@ -58,7 +59,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -106,72 +107,56 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>irir_visual</h1>
+    
+    <div class="hidden name"><code>irir_visual.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    <p>This function allows you to create 3 sorts of visuals: line, bar and point charts.</p>
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
+    <pre class="usage"><span class='fu'>irir_visual</span><span class='op'>(</span>
+  country <span class='op'>=</span> <span class='st'>"CAN"</span>,
+  chart <span class='op'>=</span> <span class='st'>"bar_1"</span>,
+  title <span class='op'>=</span> <span class='cn'>TRUE</span>,
+  years <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>max</a></span><span class='op'>(</span><span class='va'>IRI_data</span><span class='op'>$</span><span class='va'>year</span><span class='op'>)</span><span class='op'>)</span>
+<span class='op'>)</span></pre>
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="irir_company.html">irir_company()</a></code> </p>
-        </td>
-        <td><p>irir_company</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="irir_country.html">irir_country()</a></code> </p>
-        </td>
-        <td><p>irir_country</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="irir_data.html">irir_data()</a></code> </p>
-        </td>
-        <td><p>irir_data</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="irir_indicator.html">irir_indicator()</a></code> </p>
-        </td>
-        <td><p>irir_indicator</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="irir_industry.html">irir_industry()</a></code> </p>
-        </td>
-        <td><p>irir_industry</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="irir_visual.html">irir_visual()</a></code> </p>
-        </td>
-        <td><p>irir_visual</p></td>
-      </tr>
-    </tbody>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>country</th>
+      <td><p>The Country ISO code</p></td>
+    </tr>
+    <tr>
+      <th>chart</th>
+      <td><p>Type of charts</p></td>
+    </tr>
+    <tr>
+      <th>title</th>
+      <td><p>Chart title, set by default to TRUE</p></td>
+    </tr>
+    <tr>
+      <th>years</th>
+      <td><p>Year, only works for bar chart and set by default to max year of IRI's data</p></td>
+    </tr>
     </table>
-  </div>
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>Chosen Graph</p>
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p><code><a href='irir_country.html'>irir_country</a></code> for the IRI's country code, <code><a href='irir_industry.html'>irir_industry</a></code> for the IRI's industries name, <code><a href='irir_indicator.html'>irir_indicator</a></code> for the IRI's indicators, <code><a href='irir_company.html'>irir_company</a></code> for the IRI's companies name and <code><a href='irir_data.html'>irir_data</a></code> to collect the data.</p></div>
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='fu'>irir_visual</span><span class='op'>(</span>country <span class='op'>=</span> <span class='st'>"CAN"</span>, chart <span class='op'>=</span> <span class='st'>"bar_1"</span>, title <span class='op'>=</span> <span class='cn'>TRUE</span>, years <span class='op'>=</span> <span class='fl'>2019</span><span class='op'>)</span>
+</div><div class='img'><img src='irir_visual-1.png' alt='' width='700' height='433' /></div></pre>
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
