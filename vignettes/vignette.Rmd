@@ -7,7 +7,7 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-```{r, include = FALSE}
+```{r, include = FALSE,warning=FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
@@ -27,19 +27,10 @@ To learn more about IRI and follow the work of the European Comission, please vi
 
 ## Installation
 
-You can install the released version of iriR from [GitHub](https://github.com/warint/EpiBibR) with:
-
-``` r
-devtools::install_github("warint/iriR")
-```
-
-
-## Installation
-
 You can install the current development version of 'iriR' with:
 
 ```{r, eval = FALSE}
-devtools::install_github("warint/spiR")
+devtools::install_github("warint/iriR")
 ```
 
 ```{r, echo=FALSE}
@@ -82,7 +73,7 @@ irir_company() # A list of all companies will be produced
 
 irir_company(company = "Samsung") # A list with all the variables including "Samsung" will be produced
 
-irir_indicator("Samsung") # A list with all the variables including "Samsung" will be produced
+irir_company("Samsung") # A list with all the variables including "Samsung" will be produced
 ```
 
 ### Step 4: Getting the industry' name
@@ -157,13 +148,13 @@ irir_visual(country = "" ,chart = "bar_1")
 
 If the argument "country" is missing, Canada will be included by default
 
-```{r}
+```{r,eval=FALSE}
 irir_visual(chart = "bar_1")
 ```
 
 However, you can choose the country of your choice to be included.
 
-```{r}
+```{r,eval=FALSE}
 irir_visual(country = "FRA",  chart = "bar_1")
 ```
 
