@@ -161,12 +161,12 @@ irir_visual(country = "FRA",  chart = "bar_1")
 The same logic applies for the two other bar charts
 
 
-```{r}
+```{r,eval=FALSE}
 irir_visual(chart = "bar_2")
 ```
 
 
-```{r}
+```{r,eval=FALSE}
 irir_visual(chart = "bar_3")
 ```
 
