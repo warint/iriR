@@ -172,30 +172,30 @@ irir_visual(chart = "bar_3")
 
 ### Linecharts
 
-```{r}
+```{r,eval=FALSE}
 irir_visual(chart = "line_1")
 ```
 
 
-```{r}
+```{r,eval=FALSE}
 irir_visual(country= "IND", chart = "line_2")
 ```
 
-```{r}
+```{r,eval=FALSE}
 irir_visual( chart = "line_3")
 ```
-```{r}
+```{r,eval=FALSE}
 irir_visual( chart = "line_4")
 ```
 
-```{r}
+```{r,eval=FALSE}
 irir_visual( chart = "line_5")
 ```
 
-```{r}
+```{r,eval=FALSE}
 irir_visual( chart = "line_6")
 ```
 
-```{r}
+```{r,eval=FALSE}
 irir_visual( chart = "point_1")
 ```
