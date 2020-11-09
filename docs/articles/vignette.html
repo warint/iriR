@@ -89,8 +89,8 @@
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>You can install the current development version of ‘iriR’ with:</p>
-<div class="sourceCode" id="cb1"><pre class="downlit">
-<span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span><span class="op">(</span><span class="st">"warint/iriR"</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span><span class="op">(</span><span class="st">"warint/iriR"</span><span class="op">)</span></code></pre></div>
 </div>
 <div id="how-to" class="section level2">
 <h2 class="hasAnchor">
@@ -99,58 +99,58 @@
 <h3 class="hasAnchor">
 <a href="#step-1-getting-the-countrys-iso-code" class="anchor"></a>Step 1: Getting the country’s ISO code</h3>
 <p>A user needs to enter the ISO code of a country. To have access to this code, the following function provides this information.</p>
-<div class="sourceCode" id="cb2"><pre class="downlit">
-<span class="fu"><a href="../reference/irir_country.html">irir_country</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># A list of all countries will be produced</span>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/irir_country.html">irir_country</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># A list of all countries will be produced</span>
 
 <span class="fu"><a href="../reference/irir_country.html">irir_country</a></span><span class="op">(</span>country <span class="op">=</span> <span class="st">"Canada"</span><span class="op">)</span> <span class="co"># The ISO code for Canada will be produced</span>
 
-<span class="fu"><a href="../reference/irir_country.html">irir_country</a></span><span class="op">(</span><span class="st">"Canada"</span><span class="op">)</span> <span class="co"># The ISO code for Canada will be produced</span></pre></div>
+<span class="fu"><a href="../reference/irir_country.html">irir_country</a></span><span class="op">(</span><span class="st">"Canada"</span><span class="op">)</span> <span class="co"># The ISO code for Canada will be produced</span></code></pre></div>
 </div>
 <div id="step-2-getting-the-indicators-code" class="section level3">
 <h3 class="hasAnchor">
 <a href="#step-2-getting-the-indicators-code" class="anchor"></a>Step 2: Getting the indicator’s code</h3>
 <p>A user needs to enter the code of the desired indicator. To do so, the following function provides access to all the indicators of interest.</p>
-<div class="sourceCode" id="cb3"><pre class="downlit">
-<span class="fu"><a href="../reference/irir_indicator.html">irir_indicator</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># A list of all indicators will be produced</span>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/irir_indicator.html">irir_indicator</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># A list of all indicators will be produced</span>
 
 <span class="fu"><a href="../reference/irir_indicator.html">irir_indicator</a></span><span class="op">(</span>indicators <span class="op">=</span> <span class="st">"sales"</span><span class="op">)</span> <span class="co"># A list with all the variables including "sales" will be produced</span>
 
-<span class="fu"><a href="../reference/irir_indicator.html">irir_indicator</a></span><span class="op">(</span><span class="st">"sales"</span><span class="op">)</span> <span class="co"># A list with all the variables including "sales" will be produced</span></pre></div>
+<span class="fu"><a href="../reference/irir_indicator.html">irir_indicator</a></span><span class="op">(</span><span class="st">"sales"</span><span class="op">)</span> <span class="co"># A list with all the variables including "sales" will be produced</span></code></pre></div>
 </div>
 <div id="step-3-getting-the-company-name" class="section level3">
 <h3 class="hasAnchor">
 <a href="#step-3-getting-the-company-name" class="anchor"></a>Step 3: Getting the company’ name</h3>
 <p>A user needs to enter the name of the desired company. To do so, the following function provides access to all the companies of interest.</p>
-<div class="sourceCode" id="cb4"><pre class="downlit">
-<span class="fu"><a href="../reference/irir_company.html">irir_company</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># A list of all companies will be produced</span>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/irir_company.html">irir_company</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># A list of all companies will be produced</span>
 
 <span class="fu"><a href="../reference/irir_company.html">irir_company</a></span><span class="op">(</span>company <span class="op">=</span> <span class="st">"Samsung"</span><span class="op">)</span> <span class="co"># A list with all the variables including "Samsung" will be produced</span>
 
-<span class="fu"><a href="../reference/irir_company.html">irir_company</a></span><span class="op">(</span><span class="st">"Samsung"</span><span class="op">)</span> <span class="co"># A list with all the variables including "Samsung" will be produced</span></pre></div>
+<span class="fu"><a href="../reference/irir_company.html">irir_company</a></span><span class="op">(</span><span class="st">"Samsung"</span><span class="op">)</span> <span class="co"># A list with all the variables including "Samsung" will be produced</span></code></pre></div>
 </div>
 <div id="step-4-getting-the-industry-name" class="section level3">
 <h3 class="hasAnchor">
 <a href="#step-4-getting-the-industry-name" class="anchor"></a>Step 4: Getting the industry’ name</h3>
 <p>A user needs to enter the name of the desired industry. To do so, the following function provides access to all the industries of interest.</p>
-<div class="sourceCode" id="cb5"><pre class="downlit">
-<span class="fu"><a href="../reference/irir_industry.html">irir_industry</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># A list of all companies will be produced</span>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/irir_industry.html">irir_industry</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># A list of all companies will be produced</span>
 
 <span class="fu"><a href="../reference/irir_industry.html">irir_industry</a></span><span class="op">(</span>industry <span class="op">=</span> <span class="st">"Automobile"</span><span class="op">)</span> <span class="co"># A list with all the variables including "Automobile" will be produced</span>
 
-<span class="fu"><a href="../reference/irir_industry.html">irir_industry</a></span><span class="op">(</span><span class="st">"Automobile"</span><span class="op">)</span><span class="co"># A list with all the variables including "Automobile" will be produced</span></pre></div>
+<span class="fu"><a href="../reference/irir_industry.html">irir_industry</a></span><span class="op">(</span><span class="st">"Automobile"</span><span class="op">)</span><span class="co"># A list with all the variables including "Automobile" will be produced</span></code></pre></div>
 </div>
 <div id="step-5-getting-the-data" class="section level3">
 <h3 class="hasAnchor">
 <a href="#step-5-getting-the-data" class="anchor"></a>Step 5: Getting the data</h3>
 <p>Once the user knows all the arguments, s.he can collect the data in a very easy way through this function:</p>
-<div class="sourceCode" id="cb6"><pre class="downlit">
-<span class="fu"><a href="../reference/irir_data.html">irir_data</a></span><span class="op">(</span>country <span class="op">=</span> <span class="st">"USA"</span>, years <span class="op">=</span> <span class="st">"2018"</span>, indicators <span class="op">=</span> <span class="st">"RD.euro"</span>, company <span class="op">=</span> <span class="st">"FORD MOTOR"</span>, industry <span class="op">=</span> <span class="st">"Automobiles &amp; Parts"</span>, rank <span class="op">=</span> <span class="fl">14</span><span class="op">)</span>  <span class="co"># It generates a data frame of the overall IRI data for American company "FORD MOTOR" in 2018.</span>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/irir_data.html">irir_data</a></span><span class="op">(</span>country <span class="op">=</span> <span class="st">"USA"</span>, years <span class="op">=</span> <span class="st">"2018"</span>, indicators <span class="op">=</span> <span class="st">"RD.euro"</span>, company <span class="op">=</span> <span class="st">"FORD MOTOR"</span>, industry <span class="op">=</span> <span class="st">"Automobiles &amp; Parts"</span>, rank <span class="op">=</span> <span class="fl">14</span><span class="op">)</span>  <span class="co"># It generates a data frame of the overall IRI data for American company "FORD MOTOR" in 2018.</span>
 
 <span class="fu"><a href="../reference/irir_data.html">irir_data</a></span><span class="op">(</span>country<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"USA"</span>, <span class="st">"FRA"</span><span class="op">)</span>, years<span class="op">=</span><span class="st">"2018"</span>,<span class="op">)</span> <span class="co"># It generates a data frame of all the companies data from all the industries for the USA and France in 2018.</span>
 
 <span class="fu"><a href="../reference/irir_data.html">irir_data</a></span><span class="op">(</span>years <span class="op">=</span> <span class="st">"2018"</span><span class="op">)</span> <span class="co"># It generates a data frame of all the companies data for from all the industries for all the countries in 2018.</span>
 
-<span class="fu"><a href="../reference/irir_data.html">irir_data</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># It generates a data frame of the complete dataset</span></pre></div>
+<span class="fu"><a href="../reference/irir_data.html">irir_data</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># It generates a data frame of the complete dataset</span></code></pre></div>
 </div>
 </div>
 <div id="create-visuals-with-irir_visual" class="section level2">
@@ -189,38 +189,38 @@
 <h3 class="hasAnchor">
 <a href="#barcharts" class="anchor"></a>Barcharts</h3>
 <p>Country set to Canada by default. If there is no country code but an empty argument, only top 5 will appear as below.</p>
-<div class="sourceCode" id="cb7"><pre class="downlit">
-<span class="fu"><a href="../reference/irir_visual.html">irir_visual</a></span><span class="op">(</span>country <span class="op">=</span> <span class="st">""</span> ,chart <span class="op">=</span> <span class="st">"bar_1"</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/irir_visual.html">irir_visual</a></span><span class="op">(</span>country <span class="op">=</span> <span class="st">""</span> ,chart <span class="op">=</span> <span class="st">"bar_1"</span><span class="op">)</span></code></pre></div>
 <p><img src="vignette_files/figure-html/unnamed-chunk-9-1.png" width="700"></p>
 <p>If the argument “country” is missing, Canada will be included by default</p>
-<div class="sourceCode" id="cb8"><pre class="downlit">
-<span class="fu"><a href="../reference/irir_visual.html">irir_visual</a></span><span class="op">(</span>chart <span class="op">=</span> <span class="st">"bar_1"</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/irir_visual.html">irir_visual</a></span><span class="op">(</span>chart <span class="op">=</span> <span class="st">"bar_1"</span><span class="op">)</span></code></pre></div>
 <p>However, you can choose the country of your choice to be included.</p>
-<div class="sourceCode" id="cb9"><pre class="downlit">
-<span class="fu"><a href="../reference/irir_visual.html">irir_visual</a></span><span class="op">(</span>country <span class="op">=</span> <span class="st">"FRA"</span>,  chart <span class="op">=</span> <span class="st">"bar_1"</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/irir_visual.html">irir_visual</a></span><span class="op">(</span>country <span class="op">=</span> <span class="st">"FRA"</span>,  chart <span class="op">=</span> <span class="st">"bar_1"</span><span class="op">)</span></code></pre></div>
 <p>The same logic applies for the two other bar charts</p>
-<div class="sourceCode" id="cb10"><pre class="downlit">
-<span class="fu"><a href="../reference/irir_visual.html">irir_visual</a></span><span class="op">(</span>chart <span class="op">=</span> <span class="st">"bar_2"</span><span class="op">)</span></pre></div>
-<div class="sourceCode" id="cb11"><pre class="downlit">
-<span class="fu"><a href="../reference/irir_visual.html">irir_visual</a></span><span class="op">(</span>chart <span class="op">=</span> <span class="st">"bar_3"</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/irir_visual.html">irir_visual</a></span><span class="op">(</span>chart <span class="op">=</span> <span class="st">"bar_2"</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/irir_visual.html">irir_visual</a></span><span class="op">(</span>chart <span class="op">=</span> <span class="st">"bar_3"</span><span class="op">)</span></code></pre></div>
 </div>
 <div id="linecharts" class="section level3">
 <h3 class="hasAnchor">
 <a href="#linecharts" class="anchor"></a>Linecharts</h3>
-<div class="sourceCode" id="cb12"><pre class="downlit">
-<span class="fu"><a href="../reference/irir_visual.html">irir_visual</a></span><span class="op">(</span>chart <span class="op">=</span> <span class="st">"line_1"</span><span class="op">)</span></pre></div>
-<div class="sourceCode" id="cb13"><pre class="downlit">
-<span class="fu"><a href="../reference/irir_visual.html">irir_visual</a></span><span class="op">(</span>country<span class="op">=</span> <span class="st">"IND"</span>, chart <span class="op">=</span> <span class="st">"line_2"</span><span class="op">)</span></pre></div>
-<div class="sourceCode" id="cb14"><pre class="downlit">
-<span class="fu"><a href="../reference/irir_visual.html">irir_visual</a></span><span class="op">(</span> chart <span class="op">=</span> <span class="st">"line_3"</span><span class="op">)</span></pre></div>
-<div class="sourceCode" id="cb15"><pre class="downlit">
-<span class="fu"><a href="../reference/irir_visual.html">irir_visual</a></span><span class="op">(</span> chart <span class="op">=</span> <span class="st">"line_4"</span><span class="op">)</span></pre></div>
-<div class="sourceCode" id="cb16"><pre class="downlit">
-<span class="fu"><a href="../reference/irir_visual.html">irir_visual</a></span><span class="op">(</span> chart <span class="op">=</span> <span class="st">"line_5"</span><span class="op">)</span></pre></div>
-<div class="sourceCode" id="cb17"><pre class="downlit">
-<span class="fu"><a href="../reference/irir_visual.html">irir_visual</a></span><span class="op">(</span> chart <span class="op">=</span> <span class="st">"line_6"</span><span class="op">)</span></pre></div>
-<div class="sourceCode" id="cb18"><pre class="downlit">
-<span class="fu"><a href="../reference/irir_visual.html">irir_visual</a></span><span class="op">(</span> chart <span class="op">=</span> <span class="st">"point_1"</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/irir_visual.html">irir_visual</a></span><span class="op">(</span>chart <span class="op">=</span> <span class="st">"line_1"</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/irir_visual.html">irir_visual</a></span><span class="op">(</span>country<span class="op">=</span> <span class="st">"IND"</span>, chart <span class="op">=</span> <span class="st">"line_2"</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/irir_visual.html">irir_visual</a></span><span class="op">(</span> chart <span class="op">=</span> <span class="st">"line_3"</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/irir_visual.html">irir_visual</a></span><span class="op">(</span> chart <span class="op">=</span> <span class="st">"line_4"</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/irir_visual.html">irir_visual</a></span><span class="op">(</span> chart <span class="op">=</span> <span class="st">"line_5"</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/irir_visual.html">irir_visual</a></span><span class="op">(</span> chart <span class="op">=</span> <span class="st">"line_6"</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/irir_visual.html">irir_visual</a></span><span class="op">(</span> chart <span class="op">=</span> <span class="st">"point_1"</span><span class="op">)</span></code></pre></div>
 </div>
 </div>
   </div>

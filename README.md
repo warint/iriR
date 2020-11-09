@@ -9,6 +9,9 @@
 status](https://travis-ci.org/warint/iriR.svg?branch=master)](https://travis-ci.org/warint/iriR)
 [![AppVeyor build
 status](https://ci.appveyor.com/api/projects/status/github/warint/iriR?branch=master&svg=true)](https://ci.appveyor.com/project/warint/iriR)
+[![](http://cranlogs.r-pkg.org/badges/grand-total/iriR?color=blue)](https://cran.r-project.org/package=iriR)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/iriR)](https://CRAN.R-project.org/package=iriR)
 <!-- badges: end -->
 
 ## Overview

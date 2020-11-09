@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
 <script src="pkgdown.js"></script><meta property="og:title" content="Client for the EU Industrial Research and Industry Scoreboard ">
-<meta property="og:description" content='The Economics of Industrial Research &amp; Innovation (IRI) is a scientific project carried out within the Directorate B: Growth and Innovation, one of the seven scientific institutes of the European Commissions Joint Research Centre (JRC) (&lt;https://iri.jrc.ec.europa.eu/home/&gt;). iriR objective is to allows an easy connection with R to the European Commissions Economics of Industrial Research and Innovation data. Please cite: Warin, Th. (2020) "iriR: An R Package for the EU Industrial Research and Industry Scoreboard", &lt;10.6084/m9.figshare.11774640&gt;.'>
+<meta property="og:description" content="The Economics of Industrial Research &amp; Innovation (IRI) is a scientific project carried out within the Directorate B: Growth and Innovation, one of the seven scientific institutes of the European Commissions Joint Research Centre (JRC) (&lt;https://iri.jrc.ec.europa.eu/home/&gt;). iriRs objective is to allow an easy connection with R to the European Commission's Economics of Industrial Research and Innovation data. Please cite: Warin, Th. (2020) &quot;iriR: An R Package for the EU Industrial Research and Industry Scoreboard&quot;, &lt;10.6084/m9.figshare.11774640&gt;.">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -83,8 +83,8 @@
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>You can install the current development version of ‘iriR’ with devtools:</p>
-<div class="sourceCode" id="cb1"><pre class="downlit">
-<span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span><span class="op">(</span><span class="st">"warint/iriR"</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span><span class="op">(</span><span class="st">"warint/iriR"</span><span class="op">)</span></code></pre></div>
 </div>
 <div id="how-to" class="section level2">
 <h2 class="hasAnchor">
@@ -93,58 +93,58 @@
 <h3 class="hasAnchor">
 <a href="#step-1-getting-the-countrys-iso-code" class="anchor"></a>Step 1: Getting the country’s ISO code</h3>
 <p>A user needs to enter the ISO code of a country. To have access to this code, the following function provides this information.</p>
-<div class="sourceCode" id="cb2"><pre class="downlit">
-<span class="fu"><a href="reference/irir_country.html">irir_country</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># A list of all countries will be produced</span>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="reference/irir_country.html">irir_country</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># A list of all countries will be produced</span>
 
 <span class="fu"><a href="reference/irir_country.html">irir_country</a></span><span class="op">(</span>country <span class="op">=</span> <span class="st">"Canada"</span><span class="op">)</span> <span class="co"># The ISO code for Canada will be produced</span>
 
-<span class="fu"><a href="reference/irir_country.html">irir_country</a></span><span class="op">(</span><span class="st">"Canada"</span><span class="op">)</span> <span class="co"># The ISO code for Canada will be produced</span></pre></div>
+<span class="fu"><a href="reference/irir_country.html">irir_country</a></span><span class="op">(</span><span class="st">"Canada"</span><span class="op">)</span> <span class="co"># The ISO code for Canada will be produced</span></code></pre></div>
 </div>
 <div id="step-2-getting-the-indicators-code" class="section level3">
 <h3 class="hasAnchor">
 <a href="#step-2-getting-the-indicators-code" class="anchor"></a>Step 2: Getting the indicator’s code</h3>
 <p>A user needs to enter the code of the desired indicator. To do so, the following function provides access to all the indicators of interest.</p>
-<div class="sourceCode" id="cb3"><pre class="downlit">
-<span class="fu"><a href="reference/irir_indicator.html">irir_indicator</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># A list of all indicators will be produced</span>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="reference/irir_indicator.html">irir_indicator</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># A list of all indicators will be produced</span>
 
 <span class="fu"><a href="reference/irir_indicator.html">irir_indicator</a></span><span class="op">(</span>indicators <span class="op">=</span> <span class="st">"sales"</span><span class="op">)</span> <span class="co"># A list with all the variables including "sales" will be produced</span>
 
-<span class="fu"><a href="reference/irir_indicator.html">irir_indicator</a></span><span class="op">(</span><span class="st">"sales"</span><span class="op">)</span> <span class="co"># A list with all the variables including "sales" will be produced</span></pre></div>
+<span class="fu"><a href="reference/irir_indicator.html">irir_indicator</a></span><span class="op">(</span><span class="st">"sales"</span><span class="op">)</span> <span class="co"># A list with all the variables including "sales" will be produced</span></code></pre></div>
 </div>
 <div id="step-3-getting-the-company-name" class="section level3">
 <h3 class="hasAnchor">
 <a href="#step-3-getting-the-company-name" class="anchor"></a>Step 3: Getting the company’ name</h3>
 <p>A user needs to enter the name of the desired company. To do so, the following function provides access to all the companies of interest.</p>
-<div class="sourceCode" id="cb4"><pre class="downlit">
-<span class="fu"><a href="reference/irir_company.html">irir_company</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># A list of all companies will be produced</span>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="reference/irir_company.html">irir_company</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># A list of all companies will be produced</span>
 
 <span class="fu"><a href="reference/irir_company.html">irir_company</a></span><span class="op">(</span>company <span class="op">=</span> <span class="st">"Samsung"</span><span class="op">)</span> <span class="co"># A list with all the variables including "Samsung" will be produced</span>
 
-<span class="fu"><a href="reference/irir_indicator.html">irir_indicator</a></span><span class="op">(</span><span class="st">"Samsung"</span><span class="op">)</span> <span class="co"># A list with all the variables including "Samsung" will be produced</span></pre></div>
+<span class="fu"><a href="reference/irir_indicator.html">irir_indicator</a></span><span class="op">(</span><span class="st">"Samsung"</span><span class="op">)</span> <span class="co"># A list with all the variables including "Samsung" will be produced</span></code></pre></div>
 </div>
 <div id="step-4-getting-the-industry-name" class="section level3">
 <h3 class="hasAnchor">
 <a href="#step-4-getting-the-industry-name" class="anchor"></a>Step 4: Getting the industry’ name</h3>
 <p>A user needs to enter the name of the desired industry. To do so, the following function provides access to all the industries of interest.</p>
-<div class="sourceCode" id="cb5"><pre class="downlit">
-<span class="fu"><a href="reference/irir_industry.html">irir_industry</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># A list of all companies will be produced</span>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="reference/irir_industry.html">irir_industry</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># A list of all companies will be produced</span>
 
 <span class="fu"><a href="reference/irir_industry.html">irir_industry</a></span><span class="op">(</span>industry <span class="op">=</span> <span class="st">"Automobile"</span><span class="op">)</span> <span class="co"># A list with all the variables including "Automobile" will be produced</span>
 
-<span class="fu"><a href="reference/irir_industry.html">irir_industry</a></span><span class="op">(</span><span class="st">"Automobile"</span><span class="op">)</span><span class="co"># A list with all the variables including "Automobile" will be produced</span></pre></div>
+<span class="fu"><a href="reference/irir_industry.html">irir_industry</a></span><span class="op">(</span><span class="st">"Automobile"</span><span class="op">)</span><span class="co"># A list with all the variables including "Automobile" will be produced</span></code></pre></div>
 </div>
 <div id="step-5-getting-the-data" class="section level3">
 <h3 class="hasAnchor">
 <a href="#step-5-getting-the-data" class="anchor"></a>Step 5: Getting the data</h3>
 <p>Once the user knows all the arguments, s.he can collect the data in a very easy way through this function:</p>
-<div class="sourceCode" id="cb6"><pre class="downlit">
-<span class="fu"><a href="reference/irir_data.html">irir_data</a></span><span class="op">(</span>country <span class="op">=</span> <span class="st">"USA"</span>, years <span class="op">=</span> <span class="st">"2018"</span>, indicators <span class="op">=</span> <span class="st">"RD.euro"</span>, company <span class="op">=</span> <span class="st">"FORD MOTOR"</span>, industry <span class="op">=</span> <span class="st">"Automobiles &amp; Parts"</span>, rank <span class="op">=</span> <span class="fl">14</span><span class="op">)</span>  <span class="co"># It generates a data frame of the overall IRI data for American company "FORD MOTOR" in 2018.</span>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="reference/irir_data.html">irir_data</a></span><span class="op">(</span>country <span class="op">=</span> <span class="st">"USA"</span>, years <span class="op">=</span> <span class="st">"2018"</span>, indicators <span class="op">=</span> <span class="st">"RD.euro"</span>, company <span class="op">=</span> <span class="st">"FORD MOTOR"</span>, industry <span class="op">=</span> <span class="st">"Automobiles &amp; Parts"</span>, rank <span class="op">=</span> <span class="fl">14</span><span class="op">)</span>  <span class="co"># It generates a data frame of the overall IRI data for American company "FORD MOTOR" in 2018.</span>
 
 <span class="fu"><a href="reference/irir_data.html">irir_data</a></span><span class="op">(</span>country<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"USA"</span>, <span class="st">"FRA"</span><span class="op">)</span>, years<span class="op">=</span><span class="st">"2018"</span>,<span class="op">)</span> <span class="co"># It generates a data frame of all the companies data from all the industries for the USA and France in 2018.</span>
 
 <span class="fu"><a href="reference/irir_data.html">irir_data</a></span><span class="op">(</span>years <span class="op">=</span> <span class="st">"2018"</span><span class="op">)</span> <span class="co"># It generates a data frame of all the companies data for from all the industries for all the countries in 2018.</span>
 
-<span class="fu"><a href="reference/irir_data.html">irir_data</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># It generates a data frame of the complete dataset</span></pre></div>
+<span class="fu"><a href="reference/irir_data.html">irir_data</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># It generates a data frame of the complete dataset</span></code></pre></div>
 </div>
 </div>
 <div id="create-visuals-with-irir_visual" class="section level2">
@@ -180,8 +180,8 @@
 <li>Allows you to choose which year will be used in the chart. If no year is set, the latest available will be used.</li>
 <li>Only works with barcharts</li>
 </ul>
-<!-- end list --><div class="sourceCode" id="cb7"><pre class="downlit">
-<span class="fu"><a href="reference/irir_visual.html">irir_visual</a></span><span class="op">(</span>chart <span class="op">=</span> <span class="st">"bar_1"</span><span class="op">)</span></pre></div>
+<!-- end list --><div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="reference/irir_visual.html">irir_visual</a></span><span class="op">(</span>chart <span class="op">=</span> <span class="st">"bar_1"</span><span class="op">)</span></code></pre></div>
 <p><img src="reference/figures/README-unnamed-chunk-9-1.png" width="100%"></p>
 <div id="cite-irir" class="section level3">
 <h3 class="hasAnchor">
@@ -212,7 +212,14 @@
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
-    <div class="license">
+    <div class="links">
+<h2>Links</h2>
+<ul class="list-unstyled">
+<li>Download from CRAN at <br><a href="https://cloud.r-project.org/package=iriR">https://​cloud.r-project.org/​package=iriR</a>
+</li>
+</ul>
+</div>
+<div class="license">
 <h2>License</h2>
 <ul class="list-unstyled">
 <li><a href="LICENSE.html">Full license</a></li>
@@ -231,6 +238,8 @@
 <ul class="list-unstyled">
 <li><a href="https://travis-ci.org/warint/iriR"><img src="https://travis-ci.org/warint/iriR.svg?branch=master" alt="Travis build status"></a></li>
 <li><a href="https://ci.appveyor.com/project/warint/iriR"><img src="https://ci.appveyor.com/api/projects/status/github/warint/iriR?branch=master&amp;svg=true" alt="AppVeyor build status"></a></li>
+<li><a href="https://cran.r-project.org/package=iriR"><img src="http://cranlogs.r-pkg.org/badges/grand-total/iriR?color=blue"></a></li>
+<li><a href="https://CRAN.R-project.org/package=iriR"><img src="https://www.r-pkg.org/badges/version/iriR" alt="CRAN status"></a></li>
 </ul>
 </div>
 </div>
