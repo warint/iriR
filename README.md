@@ -31,8 +31,8 @@ as open the data to EU policy-makers, academia, and other institutional
 and economic actors.
 
 Through our R package, people can see the six parameters that composed
-the global IRI’data on R\&D : Country, Year, Company’s name, Industry,
-Indicator and Compaany’s rank.
+the global IRI’s data on R\&D : Country, Year, Company’s name, Industry,
+Indicator and Company’s rank.
 
 To see a definition of the indicators, please visit this
 [page](https://iri.jrc.ec.europa.eu/sites/default/files/2019-12/SB2019_Final_18Dec2019_0.pdf).
@@ -40,7 +40,8 @@ See below to have access through iriR to the whole list of
 indicators,industries, companies and countries.
 
 For more information about IRI and follow the work of the European
-Comission, please visit this [page](https://iri.jrc.ec.europa.eu/home/).
+Commission, please visit this
+[page](https://iri.jrc.ec.europa.eu/home/).
 
 ## Installation
 
