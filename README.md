@@ -16,47 +16,62 @@ status](https://www.r-pkg.org/badges/version/iriR)](https://CRAN.R-project.org/p
 
 ## Overview
 
-The IRI Scoreboard for data on innovation, managed by the European
-Commission, lists Research and Development investments made by the
-world’s 1,000 top investor companies.This scientific project carried
-out within the Directorate B: Growth and Innovation, one of the seven
-scientific institutes of the European Commission’s Joint Research Centre
-(JRC).
+iriR’s objective is to allow an easy connection through the R language
+to the European Commission’s Industrial R\&D Investment Scoreboard
+(IRI). It also augment the original IRI Scoreboard in a couple of
+dimensions.
 
-The IRI aims at providing robust data and analysis on the contribution
-of private-sector R\&D to sustainable competitiveness and “prosperity”
-in the EU. With iriR, we want to make easily available the IRI’s data
-and modestly help the European Commission in achieving its goals, such
-as open the data to EU policy-makers, academia, and other institutional
-and economic actors.
+The yearly IRI Scoreboard for company-level data on innovation lists
+Research and Development investments made by the world’s 1,000 top
+investor companies. This scientific project carried out within the
+Directorate B of Growth and Innovation, one of the seven scientific
+institutes of the European Commission’s Joint Research Centre (JRC).
+
+The IRI scoreboard aims at providing robust data and analysis on the
+contribution of private-sector R\&D to sustainable competitiveness and
+“prosperity” in the EU. With iriR, we want to make easily available
+the IRI’s data. We have also compiled the yearly scoreboards through
+time to create a cross-section time-series dataset. Researchers and
+analysts have access to more then 7,500 innovative companies across the
+world, which are or have been part of the top 1,000 innovative
+companies.
 
 Through our R package, people can see the six parameters that composed
-the global IRI’s data on R\&D : Country, Year, Company’s name, Industry,
-Indicator and Company’s rank.
+the global IRI scoreboard’s data on R\&D : Country, Year, Company’s
+name, Industry, Indicator and Company’s rank.
 
 To see a definition of the indicators, please visit this
 [page](https://iri.jrc.ec.europa.eu/sites/default/files/2019-12/SB2019_Final_18Dec2019_0.pdf).
-See below to have access through iriR to the whole list of
-indicators,industries, companies and countries.
+See below to access to the whole list of indicators, industries,
+companies and countries.
 
-For more information about IRI and follow the work of the European
-Commission, please visit this
+For more information about IRI, please visit this
 [page](https://iri.jrc.ec.europa.eu/home/).
 
 ## Installation
 
-You can install the current development version of ‘iriR’ with devtools:
+Installation from CRAN:
+
+``` r
+install.packages("iriR")
+#> Installing package into '/usr/local/lib/R/site-library'
+#> (as 'lib' is unspecified)
+```
+
+You can install the latest development version of ‘iriR’ with devtools:
 
 ``` r
 devtools::install_github("warint/iriR")
 ```
 
+Then, test your installation with:
+
 ## How-To
 
 ### Step 1: Getting the country’s ISO code
 
-A user needs to enter the ISO code of a country. To have access to this
-code, the following function provides this information.
+A user needs to enter a country’s ISO code. To have access to this code,
+the following function provides this information:
 
 ``` r
 irir_country() # A list of all countries will be produced
@@ -69,7 +84,7 @@ irir_country("Canada") # The ISO code for Canada will be produced
 ### Step 2: Getting the indicator’s code
 
 A user needs to enter the code of the desired indicator. To do so, the
-following function provides access to all the indicators of interest.
+following function provides access to all the indicators of interest:
 
 ``` r
 irir_indicator() # A list of all indicators will be produced
@@ -82,7 +97,7 @@ irir_indicator("sales") # A list with all the variables including "sales" will b
 ### Step 3: Getting the company’ name
 
 A user needs to enter the name of the desired company. To do so, the
-following function provides access to all the companies of interest.
+following function provides access to all the companies of interest:
 
 ``` r
 irir_company() # A list of all companies will be produced
@@ -95,7 +110,7 @@ irir_indicator("Samsung") # A list with all the variables including "Samsung" wi
 ### Step 4: Getting the industry’ name
 
 A user needs to enter the name of the desired industry. To do so, the
-following function provides access to all the industries of interest.
+following function provides access to all the industries of interest:
 
 ``` r
 irir_industry() # A list of all companies will be produced
@@ -122,52 +137,50 @@ irir_data() # It generates a data frame of the complete dataset
 
 ## Create visuals with irir\_visual
 
-irir\_visual fonction allows to create three type of visuals from the
+irir\_visual fonction allows to create three types of visuals from the
 IRI Scoreboard for data on innovation : barcharts, linecharts and
 pointcharts.
 
-By default, graphs will illustrate top 5 countries and Canada.
+By default, graphs will illustrate the top 5 countries and Canada.
 
-However, users can modify the graphs as they wish with these arguments :
+However, users can modify the graphs as they wish with these arguments:
 
 **Country**
 
   - From the ISO codes provided by the irir\_country() function, users
-    can can choice which country they want to add to the top 5 or make
-    it appear.
+    can select which country they want to add to the top 5
 
-  - If there is no country code but an empty argument, only top 5 will
-    appear.
+  - If there is no country code but an empty argument, only the top 5
+    will appear.
 
 **Chart**
 
-  - Each chart illustrates a different data from the IRI Scoreboard
+  - Each chart illustrates a different data from the IRI Scoreboard:
       - bar\_1 : Number of leading companies in R\&D for the most
-        represented countries
+        represented countries,
       - bar\_2 : Number of leading companies in R\&D per 100 billion $US
-        of GDP for the most represented countries
+        of GDP for the most represented countries,
       - bar\_3 : R\&D expenditures of the leading companies for the most
-        represented countries
-      - line\_1 : Evolution as regards the number of leading companies
-        in R\&D for the most represented countries
-      - line\_2 : Evolution as regards the number of leading companies
-        in R\&D per 100 billion $US of GDP for
-      - line\_3 : Evolution as regards R\&D expenditures of the leading
-        companies for the the most represented countries
-      - line\_4 : Evolution as regards the number of leading companies
-        in R\&D & the total of their R\&D investments (in millions of
-        $US)")
-      - line\_5 : Evolution as regards the percentage of R\&D
-        investments made by companies of the total R\&D investments."
-      - line\_6 : Evolution as regards the R\&D per employee in $US
+        represented countries,
+      - line\_1 : Evolution of the number of leading companies in R\&D
+        for the most represented countries,
+      - line\_2 : Evolution of the number of leading companies in R\&D
+        per 100 billion $US of GDP,
+      - line\_3 : Evolution of R\&D expenditures of the leading
+        companies for the the most represented countries,
+      - line\_4 : Evolution of the number of leading companies in R\&D
+        including their total R\&D investments (in millions of $US)"),
+      - line\_5 : Evolution of the percentage of R\&D investments made
+        by companies out of the overall sample’s total R\&D investments,
+      - line\_6 : Evolution of the R\&D per employee in $US,
       - point\_1 : Net sales/R\&D investment ratio per total R\&D
-        investment for the the most represented countries
+        investments for the the most represented countries.
 
 **Years**
 
-  - Allows you to choose which year will be used in the chart. If no
-    year is set, the latest available will be used.
-  - Only works with barcharts
+  - Choose which year will be used in the chart. If no year is set, the
+    latest available will be used.
+  - It only works with barcharts
 
 <!-- end list -->
 
@@ -175,18 +188,18 @@ However, users can modify the graphs as they wish with these arguments :
 irir_visual(chart = "bar_1")
 ```
 
-<img src="man/figures/README-unnamed-chunk-9-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-10-1.png" width="100%" />
 
 ### Cite ‘iriR’
 
 ``` r
 @article{Warin2020,
 author = "Thierry Warin",
-title = "{iriR: iriR: A R Package for the EU Industrial Research and Industry Scoreboard}",
+title = "{iriR: An R Package for the EU Industrial R&D Investment Scoreboard}",
 year = "2020",
 month = "1",
 url = "https://figshare.com/articles/iriR_Client_for_the_EU_Industrial_Research_and_Industry_Scoreboard/11774640",
-doi = "10.6084/m9.figshare.11774640"
+doi = "10.6084/m9.figshare.11774640.v5"
 }
 ```
 
