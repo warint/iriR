@@ -48,18 +48,18 @@ For more information about the IRI Scoreboard, please visit this
 
 ## Installation
 
-Installation from CRAN:
+Installation from CRAN using:
 
 ``` r
 install.packages("iriR")
-#> Installing package into '/usr/local/lib/R/site-library'
-#> (as 'lib' is unspecified)
 ```
 
-You can install the latest development version of ‘iriR’ with devtools:
+You can install the latest development version of ‘iriR’ with remotes as
+follows:
 
 ``` r
-devtools::install_github("warint/iriR")
+install.packages("remotes")
+remotes::install_github("warint/iriR")
 ```
 
 Then, test your installation with:
