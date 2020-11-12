@@ -16,17 +16,17 @@ knitr::opts_chunk$set(
 
 ## Overview
 
-iriR's objective is to allow an easy connection with R to the European Commission's Industrial R&D Investment Scoreboard (IRI).
+iriR's objective is to provide an easy connection through the R language to the European Commission's Industrial R&D Investment Scoreboard (IRI) while augmenting it in a couple of dimensions.
  
-The yearly IRI Scoreboard for company-level data on innovation lists Research and Development investments made by the world’s 1,000 top investor companies. This scientific project carried out within the Directorate B of Growth and Innovation, one of the seven scientific institutes of the European Commission's Joint Research Centre (JRC).
+The yearly IRI Scoreboard for company-level data on innovation lists Research and Development investments made by the world's 1,000 top investor companies. This scientific project is carried out within the Directorate B of Growth and Innovation, one of the seven scientific institutes of the European Commission's Joint Research Centre (JRC).
 
-The IRI scoreboard aims at providing robust data and analysis on the contribution of private-sector R&D to sustainable competitiveness and "prosperity" in the EU.  With iriR, we want to make easily available the IRI's data. We have also compiled the yearly scoreboards through time to create a cross-section time-series dataset. Researchers and analysts have access to more then 7,500 innovative companies across the world, which are or have been part of the top 1,000 innovative companies.
+The IRI Scoreboard aims at providing robust data and analyses on the contribution of private-sector R&D to sustainable competitiveness and "prosperity".  With iriR, we want to make the IRI Scoreboard's data readily available. We have also compiled the yearly scoreboards through time to create a cross-section time-series dataset. Researchers and analysts have access to more than 7,500 innovative companies worldwide, which are or have been part of the top 1,000 innovative companies.
 
-Through our R package, people can see the six parameters that composed the global IRI scoreboard's data on R&D : Country, Year, Company's name, Industry, Indicator and Company's rank.
+Through our R package, researchers and analysts can access the six parameters composing the global IRI scoreboard's data on R&D: Country, Year, Company's name, Industry, Indicator and Company's rank.
 
-To see a definition of the indicators, please visit this [page](https://iri.jrc.ec.europa.eu/sites/default/files/2019-12/SB2019_Final_18Dec2019_0.pdf). See below to access  to the whole list of indicators, industries, companies and countries.
+To see a definition of the indicators, please visit this [page](https://iri.jrc.ec.europa.eu/sites/default/files/2019-12/SB2019_Final_18Dec2019_0.pdf). See below to access the whole list of indicators, industries, companies and countries.
 
-For more information about IRI, please visit this [page](https://iri.jrc.ec.europa.eu/home/).
+For more information about the IRI Scoreboard, please visit this [page](https://iri.jrc.ec.europa.eu/home/).
 
 ## Installation
 
