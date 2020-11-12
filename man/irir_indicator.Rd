@@ -13,7 +13,7 @@ irir_indicator(indicators)
 Indicator code from the Industrial Research and Innovation.
 }
 \description{
-This function allows you to find and search the right indicator code from the Industrial Research and Innovation you want to use.
+This function allows you to find and search the right indicator code from the Industrial R&D Investment Scoreboard you want to use.
 If no argument is filed, all indicators will be displayed.
 }
 \examples{
