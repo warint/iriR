@@ -40,7 +40,7 @@ iri_rank <- base::unique(IRI_data[,4])
 
 #' irir_data
 #'
-#' @description This function allows you to find and display the Industrial Research and Innovation data according to the selected parameters.
+#' @description This function allows you to find and display the Industrial R&D Investment Scoreboards (European Commission) data according to the selected parameters.
 #' If no arguments are filled, all data will be displayed.
 #'
 #' @param country Countries' ISO code.

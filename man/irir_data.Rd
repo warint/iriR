@@ -30,7 +30,7 @@ irir_data(
 Data for the country, indicator, year, company, industrial sector and rank requested
 }
 \description{
-This function allows you to find and display the Industrial Research and Innovation data according to the selected parameters.
+This function allows you to find and display the Industrial R&D Investment Scoreboards (European Commission) data according to the selected parameters.
 If no arguments are filled, all data will be displayed.
 }
 \examples{
