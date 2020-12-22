@@ -1,3 +1,14 @@
+## Resubmission
+
+This is a resubmission.
+
+In this version I have :
+
+* changed the DOI format as requested.
+* modified the description 
+
+
+
 ## Test environments
 * local R installation, R 4.0.3
 * ubuntu 16.04 (on travis-ci), R 4.0.3
