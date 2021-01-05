@@ -4,7 +4,7 @@ This is a resubmission (update).
 
 In this version I have :
 
-* changed the Title.
+* changed the title.
 * modified http to https and added trailing slashes.
 
 
