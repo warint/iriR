@@ -1,11 +1,11 @@
 ## Resubmission
 
-This is a resubmission.
+This is a resubmission (update).
 
 In this version I have :
 
-* changed the DOI format as requested.
-* modified the description 
+* changed the Title.
+* modified http to https and added trailing slashes.
 
 
 
@@ -23,4 +23,3 @@ installed size is 12.2Mb
     sub-directories of 1Mb or more:
       R  11.7Mb
 
-* This is a new release.
