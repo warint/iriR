@@ -227,7 +227,8 @@ irir_visual <- function(country = "CAN", chart = "bar_1", title = TRUE, years = 
   }
 
   if(chart == "bar_1"){
-    barchart1 <- IRI_data[, c("year", "company_name", "country_name", "country_code")]
+    barchart1 <- IRI_data[, c("year", "company_name", "country_name", "country_code","indicator_code")]
+    barchart1 <- dplyr::filter(barchart1, indicator_code == "RD.euro")
     barchart1 <- dplyr::filter(barchart1, year == years)
     barchart1$value <- 1
     barchart1 <- stats::aggregate(value ~ year + country_name + country_code, barchart1, sum, na.rm=TRUE)
@@ -311,7 +312,7 @@ irir_visual <- function(country = "CAN", chart = "bar_1", title = TRUE, years = 
         ggplot2::geom_col() +
         ggplot2::ylab("")  +
         ggplot2::xlab("") +
-        ggplot2::ggtitle(paste("R&D expenditures of the leading companies \nfor the most represented countries in", years)) +
+        ggplot2::ggtitle(paste("R&D expenditures ($US) of the leading companies \nfor the most represented countries in", years)) +
         ggplot2::theme_minimal() +
         ggsci::scale_fill_uchicago() +
         ggplot2::scale_y_continuous(labels = scales::dollar) +
@@ -332,7 +333,8 @@ irir_visual <- function(country = "CAN", chart = "bar_1", title = TRUE, years = 
         geom_text(aes(label=paste0("$", round(value/1000000000, digits = 0), " B")), vjust=-0.5, hjust = 0.5, colour = "black", size = 3.2, fontface = "bold")
     }
   } else if(chart == "line_1"){
-    linechart1 <- IRI_data[, c("year", "company_name", "country_name", "country_code")]
+    linechart1 <- IRI_data[, c("year", "company_name", "country_name", "country_code","indicator_code")]
+    linechart1 <- dplyr::filter(linechart1, indicator_code == "RD.euro")
     linechart1$value <- 1
     linechart1 <- stats::aggregate(value ~ year + country_name + country_code, linechart1, sum, na.rm=TRUE)
     linechart1 <- dplyr::arrange(linechart1, desc(year), desc(value))
