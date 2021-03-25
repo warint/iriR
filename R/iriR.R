@@ -344,7 +344,7 @@ irir_visual <- function(country = "CAN", chart = "bar_1", title = TRUE, years = 
         geom_line() +
         ggplot2::ylab("")  +
         ggplot2::xlab("") +
-        ggplot2::ggtitle(paste("Evolution as regards the number of leading companies \nin R&D for the", max(IRI_data$year), "most represented countries")) +
+        ggplot2::ggtitle(paste("Evolution as regards the number of leading companies \nin R&D for the most represented countries")) +
         ggplot2::theme_minimal() +
         guides(fill=FALSE) +
         ggplot2::geom_point(size = 2, stroke = 1) +
