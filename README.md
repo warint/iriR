@@ -6,7 +6,7 @@
 <!-- badges: start -->
 
 [![Travis build
-status](https://travis-ci.org/warint/iriR.svg?branch=master)](https://travis-ci.org/warint/iriR)
+status](https://travis-ci.com/warint/iriR.svg?branch=master)](https://travis-ci.com/warint/iriR)
 [![AppVeyor build
 status](https://ci.appveyor.com/api/projects/status/github/warint/iriR?branch=master&svg=true)](https://ci.appveyor.com/project/warint/iriR)
 [![](http://cranlogs.r-pkg.org/badges/grand-total/iriR?color=blue)](https://cran.r-project.org/package=iriR)
