@@ -34,7 +34,7 @@ contribution of private-sector R\&D to sustainable competitiveness and
 readily available. We have also compiled the yearly scoreboards through
 time to create a cross-section time-series dataset. Researchers and
 analysts have access to more than 7,500 innovative companies worldwide,
-which are or have been part of the top 1,000 innovative companies.
+which are or have been part of the top 1,000 innovative companies..
 
 Through our R package, researchers and analysts can access the six
 parameters composing the global IRI scoreboard’s data on R\&D: Country,
