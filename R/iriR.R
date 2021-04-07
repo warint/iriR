@@ -1,7 +1,13 @@
 # Loading data
 url <- paste0("https://warin.ca/datalake/iriR/iri_data.csv")
 path <- file.path(tempdir(), "temp.csv")
-curl::curl_download(url, path)
+if (httr::http_error(url)) { # network is down = message (not an error anymore)
+  message("No Internet connection or the server is in maintenance mode.")
+  return(NULL)
+} else { # network is up = proceed to download via curl
+  message("iriR: downloading remote dataset.")
+  with(options(timeout = max(300, getOption("timeout"))),curl::curl_download(url, path))
+} # /if - network up or down
 # Reading data
 csv_file <- file.path(paste0(tempdir(), "/temp.csv"))
 IRI_data <- read.csv(csv_file)
@@ -9,7 +15,13 @@ IRI_data <- read.csv(csv_file)
 # Loading indicators
 url <- paste0("https://warin.ca/datalake/iriR/iri_indicator.csv")
 path <- file.path(tempdir(), "temp.csv")
-curl::curl_download(url, path)
+if (httr::http_error(url)) { # network is down = message (not an error anymore)
+  message("No Internet connection or the server is in maintenance mode.")
+  return(NULL)
+} else { # network is up = proceed to download via curl
+  message("iriR: downloading remote dataset.")
+  with(options(timeout = max(300, getOption("timeout"))),curl::curl_download(url, path))
+} # /if - network up or down
 csv_file <- file.path(paste0(tempdir(), "/temp.csv"))
 IRI_indicator <- read.csv(csv_file)
 
