@@ -4,8 +4,9 @@ This is a resubmission (update).
 
 In this version I have :
 
-* changed the title.
-* modified http to https and added trailing slashes.
+* added an informative message if the resource is not available or has changed while downloading data.
+* set a timeout
+* removed the LazyData mention since date are retrieve from a datalake.
 
 
 
