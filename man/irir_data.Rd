@@ -39,5 +39,5 @@ data <- irir_data(country = "USA", years = "2018", indicators = "RD.euro",
 }
 \seealso{
 \code{\link{irir_indicator}} for the IRI's indicator symbol, \code{\link{irir_country}} for the country's ISO code,
-     \code{\link{irir_company}} for the IRI's companies name and \code{\link{irir_industry}} for the IRI's industries name.
+\code{\link{irir_company}} for the IRI's companies name and \code{\link{irir_industry}} for the IRI's industries name.
 }

@@ -5,8 +5,8 @@
 
 <!-- badges: start -->
 
-[![Travis build
-status](https://travis-ci.com/warint/iriR.svg?branch=master)](https://travis-ci.com/warint/iriR)
+[![Build
+Status](https://travis-ci.com/warint/iriR.svg?branch=master)](https://travis-ci.com/warint/iriR)
 [![AppVeyor build
 status](https://ci.appveyor.com/api/projects/status/github/warint/iriR?branch=master&svg=true)](https://ci.appveyor.com/project/warint/iriR)
 [![](http://cranlogs.r-pkg.org/badges/grand-total/iriR?color=blue)](https://cran.r-project.org/package=iriR)
@@ -19,7 +19,7 @@ Awesome](https://awesome.re/mentioned-badge.svg)](https://github.com/SNStatComp/
 ## Overview
 
 iriR’s objective is to provide an easy connection through the R language
-to the European Commission’s Industrial R\&D Investment Scoreboard (IRI)
+to the European Commission’s Industrial R&D Investment Scoreboard (IRI)
 while augmenting it in a couple of dimensions.
 
 The yearly IRI Scoreboard for company-level data on innovation lists
@@ -29,7 +29,7 @@ Directorate B of Growth and Innovation, one of the seven scientific
 institutes of the European Commission’s Joint Research Centre (JRC).
 
 The IRI Scoreboard aims at providing robust data and analyses on the
-contribution of private-sector R\&D to sustainable competitiveness and
+contribution of private-sector R&D to sustainable competitiveness and
 “prosperity”. With iriR, we want to make the IRI Scoreboard’s data
 readily available. We have also compiled the yearly scoreboards through
 time to create a cross-section time-series dataset. Researchers and
@@ -37,7 +37,7 @@ analysts have access to more than 7,500 innovative companies worldwide,
 which are or have been part of the top 1,000 innovative companies..
 
 Through our R package, researchers and analysts can access the six
-parameters composing the global IRI scoreboard’s data on R\&D: Country,
+parameters composing the global IRI scoreboard’s data on R&D: Country,
 Year, Company’s name, Industry, Indicator and Company’s rank.
 
 To see a definition of the indicators, please visit this
@@ -147,42 +147,40 @@ However, users can modify the graphs as they wish with these arguments:
 
 **Country**
 
-  - From the ISO codes provided by the irir\_country() function, users
+-   From the ISO codes provided by the irir\_country() function, users
     can select which country they want to add to the top 5
 
-  - If there is no country code but an empty argument, only the top 5
+-   If there is no country code but an empty argument, only the top 5
     will appear.
 
 **Chart**
 
-  - Each chart illustrates a different data from the IRI Scoreboard:
-      - bar\_1 : Number of leading companies in R\&D for the most
+-   Each chart illustrates a different data from the IRI Scoreboard:
+    -   bar\_1 : Number of leading companies in R&D for the most
         represented countries,
-      - bar\_2 : Number of leading companies in R\&D per 100 billion $US
+    -   bar\_2 : Number of leading companies in R&D per 100 billion $US
         of GDP for the most represented countries,
-      - bar\_3 : R\&D expenditures of the leading companies for the most
+    -   bar\_3 : R&D expenditures of the leading companies for the most
         represented countries,
-      - line\_1 : Evolution of the number of leading companies in R\&D
+    -   line\_1 : Evolution of the number of leading companies in R&D
         for the most represented countries,
-      - line\_2 : Evolution of the number of leading companies in R\&D
+    -   line\_2 : Evolution of the number of leading companies in R&D
         per 100 billion $US of GDP,
-      - line\_3 : Evolution of R\&D expenditures of the leading
-        companies for the the most represented countries,
-      - line\_4 : Evolution of the number of leading companies in R\&D
-        including their total R\&D investments (in millions of $US)"),
-      - line\_5 : Evolution of the percentage of R\&D investments made
-        by companies out of the overall sample’s total R\&D investments,
-      - line\_6 : Evolution of the R\&D per employee in $US,
-      - point\_1 : Net sales/R\&D investment ratio per total R\&D
+    -   line\_3 : Evolution of R&D expenditures of the leading companies
+        for the the most represented countries,
+    -   line\_4 : Evolution of the number of leading companies in R&D
+        including their total R&D investments (in millions of $US)"),
+    -   line\_5 : Evolution of the percentage of R&D investments made by
+        companies out of the overall sample’s total R&D investments,
+    -   line\_6 : Evolution of the R&D per employee in $US,
+    -   point\_1 : Net sales/R&D investment ratio per total R&D
         investments for the the most represented countries.
 
 **Years**
 
-  - Choose which year will be used in the chart. If no year is set, the
+-   Choose which year will be used in the chart. If no year is set, the
     latest available will be used.
-  - It only works with barcharts
-
-<!-- end list -->
+-   It only works with barcharts
 
 ``` r
 irir_visual(chart = "bar_1")
